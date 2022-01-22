@@ -1,5 +1,5 @@
 //
-//  CategoryViewController.swift
+//  StatusViewController.swift
 //  Barcodrop
 //
 //  Created by SG on 2022/01/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class StatusViewController: UIViewController {
     
     var lblTitle: UILabel = {
         var label = UILabel()

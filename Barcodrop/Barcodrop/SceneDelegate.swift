@@ -15,13 +15,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         let homeVC = HomeViewController()
-        homeVC.tabBarItem = UITabBarItem(title: "홈", image: #imageLiteral(resourceName: "Events"), tag: 0)
+        homeVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house")!, tag: 0)
+        
         let categoryVC = CategoryViewController()
-        categoryVC.tabBarItem = UITabBarItem(title: "카테고리", image: #imageLiteral(resourceName: "Search"), tag: 0)
+        categoryVC.tabBarItem = UITabBarItem(title: "카테고리", image: UIImage(systemName: "circle.grid.3x3.fill")!, tag: 0)
+        
+        let statusVC = SettingViewController()
+        statusVC.tabBarItem = UITabBarItem(title: "상태", image:  UIImage(systemName: "chart.bar.doc.horizontal.fill")!, tag: 0)
+        
         let settingVC = SettingViewController()
-        settingVC.tabBarItem = UITabBarItem(title: "설정", image: #imageLiteral(resourceName: "Highlights"), tag: 0)
+        settingVC.tabBarItem = UITabBarItem(title: "설정", image:  UIImage(systemName: "gearshape.fill")!, tag: 0)
+        
         let tabBarController = CBFlashyTabBarController()
-        tabBarController.viewControllers = [homeVC, categoryVC, settingVC]
+        tabBarController.viewControllers = [homeVC, categoryVC, statusVC, settingVC]
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
