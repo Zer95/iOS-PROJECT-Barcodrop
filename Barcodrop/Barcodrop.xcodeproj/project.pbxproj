@@ -13,6 +13,7 @@
 		D23E92AC279C3F810093AC28 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92AB279C3F810093AC28 /* CategoryViewController.swift */; };
 		D23E92AE279C3F880093AC28 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92AD279C3F880093AC28 /* SettingViewController.swift */; };
 		D23E92B0279C43EC0093AC28 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92AF279C43EC0093AC28 /* StatusViewController.swift */; };
+		D23E92B4279C51440093AC28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92B3279C51440093AC28 /* HomeView.swift */; };
 		D2CBB69C279442130052F41E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CBB69B279442130052F41E /* AppDelegate.swift */; };
 		D2CBB69E279442130052F41E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CBB69D279442130052F41E /* SceneDelegate.swift */; };
 		D2CBB6A5279442130052F41E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CBB6A4279442130052F41E /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		D23E92AB279C3F810093AC28 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		D23E92AD279C3F880093AC28 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D23E92AF279C43EC0093AC28 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		D23E92B3279C51440093AC28 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D2CBB698279442130052F41E /* Barcodrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barcodrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CBB69B279442130052F41E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2CBB69D279442130052F41E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,12 +70,36 @@
 		D23E92A8279C3F5C0093AC28 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				D23E92A9279C3F6E0093AC28 /* HomeViewController.swift */,
 				D23E92AB279C3F810093AC28 /* CategoryViewController.swift */,
 				D23E92AF279C43EC0093AC28 /* StatusViewController.swift */,
 				D23E92AD279C3F880093AC28 /* SettingViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		D23E92B1279C51260093AC28 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D23E92B5279C51470093AC28 /* View */,
+				D23E92B2279C512F0093AC28 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D23E92B2279C512F0093AC28 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D23E92A9279C3F6E0093AC28 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D23E92B5279C51470093AC28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D23E92B3279C51440093AC28 /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D2CBB68F279442130052F41E = {
@@ -99,6 +125,7 @@
 			children = (
 				D2CBB69B279442130052F41E /* AppDelegate.swift */,
 				D2CBB69D279442130052F41E /* SceneDelegate.swift */,
+				D23E92B1279C51260093AC28 /* Home */,
 				D23E92A8279C3F5C0093AC28 /* VC */,
 				D2CBB6A4279442130052F41E /* Assets.xcassets */,
 				D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */,
@@ -224,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23E92AC279C3F810093AC28 /* CategoryViewController.swift in Sources */,
+				D23E92B4279C51440093AC28 /* HomeView.swift in Sources */,
 				D2CBB69C279442130052F41E /* AppDelegate.swift in Sources */,
 				D2CBB69E279442130052F41E /* SceneDelegate.swift in Sources */,
 				D23E92AA279C3F6E0093AC28 /* HomeViewController.swift in Sources */,
