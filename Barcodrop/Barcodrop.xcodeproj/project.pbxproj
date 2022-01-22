@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90B97F7BC865C5D3DD6881CF /* Pods_Barcodrop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1BDD49D0158B8A4EFE416B /* Pods_Barcodrop.framework */; };
+		D23E92A6279C3C070093AC28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23E92A5279C3C070093AC28 /* Main.storyboard */; };
+		D23E92AA279C3F6E0093AC28 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92A9279C3F6E0093AC28 /* HomeViewController.swift */; };
+		D23E92AC279C3F810093AC28 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92AB279C3F810093AC28 /* CategoryViewController.swift */; };
+		D23E92AE279C3F880093AC28 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92AD279C3F880093AC28 /* SettingViewController.swift */; };
 		D2CBB69C279442130052F41E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CBB69B279442130052F41E /* AppDelegate.swift */; };
 		D2CBB69E279442130052F41E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CBB69D279442130052F41E /* SceneDelegate.swift */; };
-		D2CBB6A0279442130052F41E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CBB69F279442130052F41E /* ViewController.swift */; };
-		D2CBB6A3279442130052F41E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CBB6A1279442130052F41E /* Main.storyboard */; };
 		D2CBB6A5279442130052F41E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CBB6A4279442130052F41E /* Assets.xcassets */; };
 		D2CBB6A8279442130052F41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59CBA36907BC06EFFE01C774 /* Pods-Barcodrop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barcodrop.release.xcconfig"; path = "Target Support Files/Pods-Barcodrop/Pods-Barcodrop.release.xcconfig"; sourceTree = "<group>"; };
+		7C1BDD49D0158B8A4EFE416B /* Pods_Barcodrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Barcodrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C6F5B9CA0C17098B70215E /* Pods-Barcodrop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barcodrop.debug.xcconfig"; path = "Target Support Files/Pods-Barcodrop/Pods-Barcodrop.debug.xcconfig"; sourceTree = "<group>"; };
+		D23E92A5279C3C070093AC28 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D23E92A9279C3F6E0093AC28 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D23E92AB279C3F810093AC28 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		D23E92AD279C3F880093AC28 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D2CBB698279442130052F41E /* Barcodrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barcodrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CBB69B279442130052F41E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2CBB69D279442130052F41E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2CBB69F279442130052F41E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D2CBB6A2279442130052F41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2CBB6A4279442130052F41E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2CBB6A7279442130052F41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2CBB6A9279442130052F41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,17 +39,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B97F7BC865C5D3DD6881CF /* Pods_Barcodrop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EFB0076BFA9D955E6565F60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8C6F5B9CA0C17098B70215E /* Pods-Barcodrop.debug.xcconfig */,
+				59CBA36907BC06EFFE01C774 /* Pods-Barcodrop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		78F95689C658754198AF1D80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C1BDD49D0158B8A4EFE416B /* Pods_Barcodrop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D23E92A8279C3F5C0093AC28 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D23E92A9279C3F6E0093AC28 /* HomeViewController.swift */,
+				D23E92AB279C3F810093AC28 /* CategoryViewController.swift */,
+				D23E92AD279C3F880093AC28 /* SettingViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		D2CBB68F279442130052F41E = {
 			isa = PBXGroup;
 			children = (
 				D2CBB69A279442130052F41E /* Barcodrop */,
 				D2CBB699279442130052F41E /* Products */,
+				1EFB0076BFA9D955E6565F60 /* Pods */,
+				78F95689C658754198AF1D80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +96,10 @@
 			children = (
 				D2CBB69B279442130052F41E /* AppDelegate.swift */,
 				D2CBB69D279442130052F41E /* SceneDelegate.swift */,
-				D2CBB69F279442130052F41E /* ViewController.swift */,
-				D2CBB6A1279442130052F41E /* Main.storyboard */,
+				D23E92A8279C3F5C0093AC28 /* VC */,
 				D2CBB6A4279442130052F41E /* Assets.xcassets */,
 				D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */,
+				D23E92A5279C3C070093AC28 /* Main.storyboard */,
 				D2CBB6A9279442130052F41E /* Info.plist */,
 			);
 			path = Barcodrop;
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2CBB6AC279442130052F41E /* Build configuration list for PBXNativeTarget "Barcodrop" */;
 			buildPhases = (
+				2051C48E44F6E4A3B8E46E58 /* [CP] Check Pods Manifest.lock */,
 				D2CBB694279442130052F41E /* Sources */,
 				D2CBB695279442130052F41E /* Frameworks */,
 				D2CBB696279442130052F41E /* Resources */,
+				F43D5A65F9327B4DDE8DC827 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,36 +165,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23E92A6279C3C070093AC28 /* Main.storyboard in Resources */,
 				D2CBB6A8279442130052F41E /* LaunchScreen.storyboard in Resources */,
 				D2CBB6A5279442130052F41E /* Assets.xcassets in Resources */,
-				D2CBB6A3279442130052F41E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2051C48E44F6E4A3B8E46E58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Barcodrop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F43D5A65F9327B4DDE8DC827 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Barcodrop/Pods-Barcodrop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Barcodrop/Pods-Barcodrop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Barcodrop/Pods-Barcodrop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2CBB694279442130052F41E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2CBB6A0279442130052F41E /* ViewController.swift in Sources */,
+				D23E92AC279C3F810093AC28 /* CategoryViewController.swift in Sources */,
 				D2CBB69C279442130052F41E /* AppDelegate.swift in Sources */,
 				D2CBB69E279442130052F41E /* SceneDelegate.swift in Sources */,
+				D23E92AA279C3F6E0093AC28 /* HomeViewController.swift in Sources */,
+				D23E92AE279C3F880093AC28 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D2CBB6A1279442130052F41E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D2CBB6A2279442130052F41E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +360,7 @@
 		};
 		D2CBB6AD279442130052F41E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C6F5B9CA0C17098B70215E /* Pods-Barcodrop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,12 +383,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D2CBB6AE279442130052F41E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59CBA36907BC06EFFE01C774 /* Pods-Barcodrop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,7 +412,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
