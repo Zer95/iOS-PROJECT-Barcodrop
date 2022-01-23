@@ -23,11 +23,12 @@ class HomeView: UIView {
     let sortButton = UIButton().then {
         $0.setTitle("날짜순", for: .normal)
         $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         $0.addTarget(self, action: #selector(actionHandleDropDown), for: .touchDown)
     }
     
     let sortUpDownButton = UIButton().then {
-        $0.setTitle("↑", for: .normal)
+        $0.setTitle("↓", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.addTarget(self, action: #selector(actionHandleUpDown), for: .touchDown)
     }
@@ -35,7 +36,7 @@ class HomeView: UIView {
     lazy var sortStackView = UIStackView(arrangedSubviews: [sortButton, sortUpDownButton]).then {
         $0.axis = .horizontal
         $0.spacing = 10
-        $0.backgroundColor = .orange
+        $0.backgroundColor = .white
     }
     
     let floatingButton = MDCFloatingButton().then {
