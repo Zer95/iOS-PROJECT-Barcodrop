@@ -9,11 +9,18 @@ import UIKit
 import SnapKit
 import Then
 
+protocol HomeViewDelegate: AnyObject {
+    func actionHandleDropDown()
+}
+
 class HomeView: UIView {
+    
+    var delegate: HomeViewDelegate?
     
     let sortButton = UIButton().then {
         $0.setTitle("날짜순", for: .normal)
         $0.setTitleColor(.black, for: .normal)
+        $0.addTarget(self, action: #selector(actionHandleDropDown), for: .touchDown)
     }
     
     let sortUpDownButton = UIButton().then {
@@ -41,6 +48,10 @@ class HomeView: UIView {
             $0.top.equalToSuperview().offset(10)
             $0.left.equalToSuperview().offset(24)
         }
+    }
+    
+    @objc func actionHandleDropDown() {
+        delegate?.actionHandleDropDown()
     }
 }
 

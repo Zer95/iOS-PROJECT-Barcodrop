@@ -1,24 +1,28 @@
 PODS:
   - CBFlashyTabBarController (0.8.3)
+  - DropDown (2.3.13)
   - SnapKit (5.0.1)
   - Then (2.7.0)
 
 DEPENDENCIES:
   - CBFlashyTabBarController
+  - DropDown
   - SnapKit (~> 5.0.0)
   - Then
 
 SPEC REPOS:
   trunk:
     - CBFlashyTabBarController
+    - DropDown
     - SnapKit
     - Then
 
 SPEC CHECKSUMS:
   CBFlashyTabBarController: bc6b11dd4cbc9b54785c8944156e2f4d4f03b088
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: 67d5f7d4b1190555faa1f73b3bc415d40f636459
+PODFILE CHECKSUM: ac50ec6e008aa74b1171db2d2240a7f7ce1d5a45
 
 COCOAPODS: 1.11.2

@@ -8,5 +8,6 @@ target 'Barcodrop' do
   # Pods for Barcodrop
     pod 'CBFlashyTabBarController'
     pod 'SnapKit', '~> 5.0.0'
-    pod 'Then'		
+    pod 'Then'
+    pod 'DropDown'		
 end
