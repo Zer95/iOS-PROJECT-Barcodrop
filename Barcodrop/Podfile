@@ -10,4 +10,5 @@ target 'Barcodrop' do
     pod 'SnapKit', '~> 5.0.0'
     pod 'Then'
     pod 'DropDown'		
+    pod 'MaterialComponents/Buttons' 
 end

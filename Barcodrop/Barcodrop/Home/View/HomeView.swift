@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Then
+import MaterialComponents.MaterialButtons
 
 protocol HomeViewDelegate: AnyObject {
     func actionHandleDropDown()
@@ -36,6 +37,16 @@ class HomeView: UIView {
         $0.spacing = 10
     }
     
+    let floatingButton = MDCFloatingButton().then {
+        let image = UIImage(named: "scanIcon.jpg")
+        $0.sizeToFit()
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.setImage(image, for: .normal)
+        $0.setImageTintColor(.white, for: .normal)
+        $0.backgroundColor = .white
+     //   $0.addTarget(self, action: #selector(actionHandleDropDown), for: .touchUpInside)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -51,6 +62,12 @@ class HomeView: UIView {
             $0.top.equalToSuperview().offset(10)
             $0.left.equalToSuperview().offset(24)
         }
+        
+        addSubview(floatingButton)
+        floatingButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(120)
+            $0.right.equalToSuperview().inset(20)
+        }
     }
     
     @objc func actionHandleDropDown() {
@@ -63,4 +80,3 @@ class HomeView: UIView {
         delegate?.actionHandleUpDown(selectState: self.upDownButtonState)
     }
 }
-
