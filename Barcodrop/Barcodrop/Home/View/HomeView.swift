@@ -35,6 +35,7 @@ class HomeView: UIView {
     lazy var sortStackView = UIStackView(arrangedSubviews: [sortButton, sortUpDownButton]).then {
         $0.axis = .horizontal
         $0.spacing = 10
+        $0.backgroundColor = .orange
     }
     
     let floatingButton = MDCFloatingButton().then {
@@ -44,11 +45,12 @@ class HomeView: UIView {
         $0.setImage(image, for: .normal)
         $0.setImageTintColor(.white, for: .normal)
         $0.backgroundColor = .white
-     //   $0.addTarget(self, action: #selector(actionHandleDropDown), for: .touchUpInside)
+        //   $0.addTarget(self, action: #selector(actionHandleDropDown), for: .touchUpInside)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .white
         configureUI()
     }
     
@@ -61,12 +63,7 @@ class HomeView: UIView {
         sortStackView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.left.equalToSuperview().offset(24)
-        }
-        
-        addSubview(floatingButton)
-        floatingButton.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(120)
-            $0.right.equalToSuperview().inset(20)
+            $0.height.equalTo(30)
         }
     }
     

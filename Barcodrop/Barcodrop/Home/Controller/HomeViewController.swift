@@ -9,16 +9,15 @@ import UIKit
 import SnapKit
 import Then
 import DropDown
+import MaterialComponents.MaterialButtons
 
 class HomeViewController: UIViewController {
     
     let homeView = HomeView()
     let dropDown = DropDown()
     
-    var sortUpDownState = true
-    
     override func viewDidLoad() {
-        view.backgroundColor = .white
+        view.backgroundColor = .gray
         configureUI()
         dropDownSetting()
         homeView.delegate = self
@@ -28,7 +27,14 @@ class HomeViewController: UIViewController {
         view.addSubview(homeView)
         homeView.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
-            $0.left.right.bottom.equalToSuperview()
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(50)
+        }
+        
+        view.addSubview(homeView.floatingButton)
+        homeView.floatingButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(120)
+            $0.right.equalToSuperview().inset(20)
         }
     }
     
@@ -45,14 +51,14 @@ class HomeViewController: UIViewController {
         dropDown.textFont = UIFont.systemFont(ofSize: 20)
         
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-        homeView.sortButton.setTitle("\(item)", for: .normal)
+            homeView.sortButton.setTitle("\(item)", for: .normal)
         }
     }
     
 }
 
 extension HomeViewController: HomeViewDelegate {
-  
+    
     func actionHandleDropDown() {
         dropDown.show()
     }
