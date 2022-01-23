@@ -45,12 +45,6 @@ class HomeViewController: UIViewController {
             $0.height.equalTo(50)
         }
         
-        view.addSubview(homeView.floatingButton)
-        homeView.floatingButton.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(120)
-            $0.right.equalToSuperview().inset(20)
-        }
-        
         homeProductCollectionView.delegate = self
         homeProductCollectionView.dataSource = self
         homeProductCollectionView.backgroundColor = .white
@@ -59,6 +53,12 @@ class HomeViewController: UIViewController {
             $0.top.equalTo(homeView.snp.bottom)
             $0.left.right.equalToSuperview()
             $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
+        }
+        
+        view.addSubview(homeView.floatingButton)
+        homeView.floatingButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(120)
+            $0.right.equalToSuperview().inset(20)
         }
     }
     
