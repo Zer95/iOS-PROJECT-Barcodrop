@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     let homeView = HomeView()
     let dropDown = DropDown()
     
+    var sortUpDownState = true
+    
     override func viewDidLoad() {
         view.backgroundColor = .white
         configureUI()
@@ -50,8 +52,18 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeViewDelegate {
+  
     func actionHandleDropDown() {
         dropDown.show()
+    }
+    
+    func actionHandleUpDown(selectState: Bool) {
+        if selectState == true {
+            homeView.sortUpDownButton.setTitle("↓", for: .normal)
+        }
+        else if selectState == false {
+            homeView.sortUpDownButton.setTitle("↑", for: .normal)
+        }
     }
     
 }

@@ -11,11 +11,13 @@ import Then
 
 protocol HomeViewDelegate: AnyObject {
     func actionHandleDropDown()
+    func actionHandleUpDown(selectState:Bool)
 }
 
 class HomeView: UIView {
     
     var delegate: HomeViewDelegate?
+    var upDownButtonState = false
     
     let sortButton = UIButton().then {
         $0.setTitle("날짜순", for: .normal)
@@ -26,6 +28,7 @@ class HomeView: UIView {
     let sortUpDownButton = UIButton().then {
         $0.setTitle("↑", for: .normal)
         $0.setTitleColor(.black, for: .normal)
+        $0.addTarget(self, action: #selector(actionHandleUpDown), for: .touchDown)
     }
     
     lazy var sortStackView = UIStackView(arrangedSubviews: [sortButton, sortUpDownButton]).then {
@@ -52,6 +55,12 @@ class HomeView: UIView {
     
     @objc func actionHandleDropDown() {
         delegate?.actionHandleDropDown()
+    }
+    
+    @objc func actionHandleUpDown() {
+        sortUpDownButton.isSelected = !sortUpDownButton.isSelected
+        self.upDownButtonState = sortUpDownButton.isSelected
+        delegate?.actionHandleUpDown(selectState: self.upDownButtonState)
     }
 }
 
