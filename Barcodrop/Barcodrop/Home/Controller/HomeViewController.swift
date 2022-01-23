@@ -83,7 +83,7 @@ class HomeViewController: UIViewController {
 
 // MARK: - Delegate : HomeViewDelegate
 extension HomeViewController: HomeViewDelegate {
-    
+   
     func actionHandleDropDown() {
         dropDown.show()
     }
@@ -95,6 +95,13 @@ extension HomeViewController: HomeViewDelegate {
         else if selectState == false {
             homeView.sortUpDownButton.setTitle("↓", for: .normal)
         }
+    }
+    
+    func actionHandleHelp() {
+        let vc = HelpPopUpView()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

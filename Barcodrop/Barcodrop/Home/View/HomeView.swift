@@ -13,6 +13,7 @@ import MaterialComponents.MaterialButtons
 protocol HomeViewDelegate: AnyObject {
     func actionHandleDropDown()
     func actionHandleUpDown(selectState:Bool)
+    func actionHandleHelp()
 }
 
 class HomeView: UIView {
@@ -31,6 +32,12 @@ class HomeView: UIView {
         $0.setTitle("↓", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.addTarget(self, action: #selector(actionHandleUpDown), for: .touchDown)
+    }
+    
+    let helpButton = UIButton().then {
+        $0.setImage(UIImage(named: "help")?.withRenderingMode(.alwaysTemplate), for: .normal) // withRenderingMode -> Tint Color 적용 시키기 위함.
+        $0.addTarget(self, action: #selector(actionHandleHelp), for: .touchDown)
+        $0.tintColor = .gray
     }
     
     lazy var sortStackView = UIStackView(arrangedSubviews: [sortButton, sortUpDownButton]).then {
@@ -66,6 +73,13 @@ class HomeView: UIView {
             $0.left.equalToSuperview().offset(24)
             $0.height.equalTo(30)
         }
+        
+        addSubview(helpButton)
+        helpButton.snp.makeConstraints {
+            $0.centerY.equalTo(sortStackView)
+            $0.right.equalToSuperview().inset(10)
+            $0.width.height.equalTo(50)
+        }
     }
     
     @objc func actionHandleDropDown() {
@@ -76,5 +90,9 @@ class HomeView: UIView {
         sortUpDownButton.isSelected = !sortUpDownButton.isSelected
         self.upDownButtonState = sortUpDownButton.isSelected
         delegate?.actionHandleUpDown(selectState: self.upDownButtonState)
+    }
+    
+    @objc func actionHandleHelp() {
+        delegate?.actionHandleHelp()
     }
 }
