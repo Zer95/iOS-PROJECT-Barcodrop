@@ -60,6 +60,7 @@ class HomeViewController: UIViewController {
             $0.bottom.equalToSuperview().inset(120)
             $0.right.equalToSuperview().inset(20)
         }
+        homeView.floatingButton.addTarget(self, action: #selector(actionHandleFloating), for: .touchUpInside)
     }
     
     func dropDownSetting() {
@@ -99,6 +100,13 @@ extension HomeViewController: HomeViewDelegate {
     
     func actionHandleHelp() {
         let vc = HelpPopUpView()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func actionHandleFloating() {
+        let vc = FloatingView()
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)

@@ -67,7 +67,7 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
             $0.top.equalTo(titleLabel.snp.bottom).offset(5)
             $0.left.equalToSuperview().offset(5)
         }
-        
     }
+    
 }
 
