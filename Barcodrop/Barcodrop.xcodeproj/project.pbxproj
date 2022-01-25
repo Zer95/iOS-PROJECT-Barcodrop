@@ -111,6 +111,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D24016E727A01FE4008F763B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D2CBB69B279442130052F41E /* AppDelegate.swift */,
+				D2CBB69D279442130052F41E /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		D2CBB68F279442130052F41E = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +141,7 @@
 		D2CBB69A279442130052F41E /* Barcodrop */ = {
 			isa = PBXGroup;
 			children = (
-				D2CBB69B279442130052F41E /* AppDelegate.swift */,
-				D2CBB69D279442130052F41E /* SceneDelegate.swift */,
+				D24016E727A01FE4008F763B /* App */,
 				D23E92B1279C51260093AC28 /* Home */,
 				D23E92A8279C3F5C0093AC28 /* VC */,
 				D2CBB6A4279442130052F41E /* Assets.xcassets */,
