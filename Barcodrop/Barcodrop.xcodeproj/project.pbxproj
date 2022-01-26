@@ -106,10 +106,10 @@
 		D23E92B5279C51470093AC28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D24016E827A1889A008F763B /* Cells */,
 				D23E92B3279C51440093AC28 /* HomeView.swift */,
 				D2674A75279D1DD80044A957 /* HelpPopUpView.swift */,
 				D24016E5279EDE63008F763B /* FloatingView.swift */,
-				D2674A73279D12560044A957 /* HomeProductCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +121,14 @@
 				D2CBB69D279442130052F41E /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		D24016E827A1889A008F763B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2674A73279D12560044A957 /* HomeProductCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D2C6234327A1744F000D6D62 /* Category */ = {
