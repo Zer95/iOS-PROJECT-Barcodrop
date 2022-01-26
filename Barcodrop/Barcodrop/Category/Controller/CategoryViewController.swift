@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 class CategoryViewController: UIViewController {
     
@@ -23,7 +25,6 @@ class CategoryViewController: UIViewController {
             $0.top.left.right.equalToSuperview()
             $0.height.equalTo(400)
         }
-        
     }
     
 }
