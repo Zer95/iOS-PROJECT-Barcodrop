@@ -30,7 +30,7 @@ class CategoryViewController: UIViewController {
     
 }
 
-// MARK: - HeaderTip Image Swipe
+// MARK: - Header Image Swipe
 
 extension CategoryViewController {
     

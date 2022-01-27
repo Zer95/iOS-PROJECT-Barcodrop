@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     
     lazy var homeProductCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout).then {
         $0.register(HomeProductCollectionViewCell.self, forCellWithReuseIdentifier: homeProductCollectionViewCell)
+        $0.backgroundColor = .white
         $0.isScrollEnabled =  true
     }
     
@@ -32,12 +33,19 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         view.backgroundColor = .white
+        configureDelegate()
         configureUI()
         dropDownSetting()
+    }
+    
+    private func configureDelegate() {
         homeView.delegate = self
+        homeProductCollectionView.delegate = self
+        homeProductCollectionView.dataSource = self
     }
     
     private func configureUI() {
+        
         view.addSubview(homeView)
         homeView.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
@@ -45,9 +53,6 @@ class HomeViewController: UIViewController {
             $0.height.equalTo(50)
         }
         
-        homeProductCollectionView.delegate = self
-        homeProductCollectionView.dataSource = self
-        homeProductCollectionView.backgroundColor = .white
         view.addSubview(homeProductCollectionView)
         homeProductCollectionView.snp.makeConstraints {
             $0.top.equalTo(homeView.snp.bottom)
@@ -62,6 +67,12 @@ class HomeViewController: UIViewController {
         }
         homeView.floatingButton.addTarget(self, action: #selector(actionHandleFloating), for: .touchUpInside)
     }
+    
+}
+
+// MARK: - DropDownSetting
+
+extension HomeViewController {
     
     func dropDownSetting() {
         dropDown.dataSource = ["날짜순", "이름순", "구입순", "등록순"]
@@ -82,9 +93,10 @@ class HomeViewController: UIViewController {
     
 }
 
-// MARK: - Delegate : HomeViewDelegate
+// MARK: - HomeView : HomeViewDelegate
+
 extension HomeViewController: HomeViewDelegate {
-   
+    
     func actionHandleDropDown() {
         dropDown.show()
     }
@@ -115,6 +127,7 @@ extension HomeViewController: HomeViewDelegate {
 }
 
 // MARK: - CollectionView : homeProductCollectionView
+
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         20
