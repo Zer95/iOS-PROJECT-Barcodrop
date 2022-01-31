@@ -17,6 +17,7 @@
 		D24016E6279EDE63008F763B /* FloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016E5279EDE63008F763B /* FloatingView.swift */; };
 		D24016EC27A41013008F763B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016EB27A41013008F763B /* Log.swift */; };
 		D24016EE27A5725E008F763B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016ED27A5725E008F763B /* Device.swift */; };
+		D24016F027A82EB5008F763B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016EF27A82EB5008F763B /* UIFont.swift */; };
 		D2674A74279D12560044A957 /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2674A73279D12560044A957 /* HomeProductCollectionViewCell.swift */; };
 		D2674A76279D1DD80044A957 /* HelpPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2674A75279D1DD80044A957 /* HelpPopUpView.swift */; };
 		D2C6234727A1750A000D6D62 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C6234627A1750A000D6D62 /* CategoryView.swift */; };
@@ -40,6 +41,7 @@
 		D24016E5279EDE63008F763B /* FloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingView.swift; sourceTree = "<group>"; };
 		D24016EB27A41013008F763B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		D24016ED27A5725E008F763B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		D24016EF27A82EB5008F763B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		D2674A73279D12560044A957 /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2674A75279D1DD80044A957 /* HelpPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPopUpView.swift; sourceTree = "<group>"; };
 		D2C6234627A1750A000D6D62 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				D2C6234927A1785D000D6D62 /* Constant.swift */,
 				D24016EB27A41013008F763B /* Log.swift */,
 				D24016ED27A5725E008F763B /* Device.swift */,
+				D24016EF27A82EB5008F763B /* UIFont.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				D24016EE27A5725E008F763B /* Device.swift in Sources */,
 				D24016E6279EDE63008F763B /* FloatingView.swift in Sources */,
 				D2C6234727A1750A000D6D62 /* CategoryView.swift in Sources */,
+				D24016F027A82EB5008F763B /* UIFont.swift in Sources */,
 				D2674A76279D1DD80044A957 /* HelpPopUpView.swift in Sources */,
 				D23E92AA279C3F6E0093AC28 /* HomeViewController.swift in Sources */,
 				D23E92B0279C43EC0093AC28 /* StatusViewController.swift in Sources */,
