@@ -46,11 +46,15 @@ class FloatingView: UIViewController {
     }
     
     func configureUI() {
+        
         super.viewDidLayoutSubviews()
+        
         view.addSubview(floatingStackView)
+        
         floatingStackView.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
         }
+        
     }
     
     @objc func viewMapTapped(sender: UITapGestureRecognizer) {

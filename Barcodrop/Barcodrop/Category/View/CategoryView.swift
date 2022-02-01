@@ -42,11 +42,12 @@ class CategoryView: UIView {
     func configureUI() {
         
         addSubview(imageView)
+        imageView.addSubview(pageControl)
+        
         imageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
-        imageView.addSubview(pageControl)
         pageControl.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(10)
             $0.centerX.equalToSuperview()

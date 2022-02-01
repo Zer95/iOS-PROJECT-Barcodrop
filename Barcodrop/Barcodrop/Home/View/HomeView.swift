@@ -67,14 +67,16 @@ class HomeView: UIView {
     }
     
     private func configureUI() {
+        
         addSubview(sortStackView)
+        addSubview(helpButton)
+        
         sortStackView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.left.equalToSuperview().offset(24)
             $0.height.equalTo(30)
         }
         
-        addSubview(helpButton)
         helpButton.snp.makeConstraints {
             $0.centerY.equalTo(sortStackView)
             $0.right.equalToSuperview().inset(10)

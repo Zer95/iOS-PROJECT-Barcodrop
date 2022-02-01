@@ -51,18 +51,19 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
     private func configureUI() {
         
         contentView.addSubview(imageView)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(dateLabel)
+        
         imageView.snp.makeConstraints {
             $0.top.left.right.equalToSuperview()
             $0.height.equalTo(150)
         }
-        
-        contentView.addSubview(titleLabel)
+    
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(imageView.snp.bottom).offset(5)
             $0.left.equalToSuperview().offset(5)
         }
         
-        contentView.addSubview(dateLabel)
         dateLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(5)
             $0.left.equalToSuperview().offset(5)

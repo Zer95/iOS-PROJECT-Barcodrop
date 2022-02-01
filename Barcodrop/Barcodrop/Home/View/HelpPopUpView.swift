@@ -37,8 +37,12 @@ class HelpPopUpView: UIViewController {
     }
     
     func configureUI() {
+        
         super.viewDidLayoutSubviews()
+        
         view.addSubview(mainView)
+        mainView.addSubview(contentLabel)
+        
         mainView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(70)
             $0.right.equalToSuperview().inset(50)
@@ -46,7 +50,6 @@ class HelpPopUpView: UIViewController {
             $0.height.equalTo(100)
         }
         
-        mainView.addSubview(contentLabel)
         contentLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.left.equalToSuperview().offset(10)

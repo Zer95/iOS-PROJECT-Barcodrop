@@ -47,20 +47,21 @@ class HomeViewController: UIViewController {
     private func configureUI() {
         
         view.addSubview(homeView)
+        view.addSubview(homeProductCollectionView)
+        view.addSubview(homeView.floatingButton)
+        
         homeView.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.left.right.equalToSuperview()
             $0.height.equalTo(50)
         }
         
-        view.addSubview(homeProductCollectionView)
         homeProductCollectionView.snp.makeConstraints {
             $0.top.equalTo(homeView.snp.bottom)
             $0.left.right.equalToSuperview()
             $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
         }
         
-        view.addSubview(homeView.floatingButton)
         homeView.floatingButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(120)
             $0.right.equalToSuperview().inset(20)
