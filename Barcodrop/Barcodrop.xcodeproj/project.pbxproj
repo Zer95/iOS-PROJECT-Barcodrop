@@ -137,6 +137,31 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D281368727AACAF2002221A9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D24016EF27A82EB5008F763B /* UIFont.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D281368827AACB1A002221A9 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D24016EB27A41013008F763B /* Log.swift */,
+				D24016ED27A5725E008F763B /* Device.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		D281368927AACB3F002221A9 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				D2C6234927A1785D000D6D62 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		D2C6234327A1744F000D6D62 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,10 +190,9 @@
 		D2C6234827A177F4000D6D62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D2C6234927A1785D000D6D62 /* Constant.swift */,
-				D24016EB27A41013008F763B /* Log.swift */,
-				D24016ED27A5725E008F763B /* Device.swift */,
-				D24016EF27A82EB5008F763B /* UIFont.swift */,
+				D281368927AACB3F002221A9 /* Constant */,
+				D281368827AACB1A002221A9 /* Setting */,
+				D281368727AACAF2002221A9 /* Extension */,
 			);
 			path = Common;
 			sourceTree = "<group>";
