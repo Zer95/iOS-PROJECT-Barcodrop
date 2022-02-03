@@ -12,7 +12,7 @@ import Then
 class ListView: UIView {
     
     let titleLabel = UILabel().then {
-        $0.font = UIFont.boldSystemFont(ofSize: 14)
+        $0.font = UIFont.boldSystemFont(ofSize: 18)
         $0.textAlignment = .natural
     }
     
@@ -32,14 +32,22 @@ class ListView: UIView {
     init(title: String) {
         super.init(frame: .zero)
         titleLabel.text = title
+        titleLabel.attributedText = settingLable(title: " \(title) ", imgName: "fresh_on.png")
+        titleLabel.sizeToFit()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        addSubview(titleLabel)
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(20)
+            $0.left.equalToSuperview().offset(24)
+        }
+        
         addSubview(contentView)
         contentView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(5)
             $0.left.equalToSuperview().offset(24)
             $0.right.equalToSuperview().inset(24)
             $0.bottom.equalToSuperview().inset(24)
@@ -48,5 +56,15 @@ class ListView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("error")
+    }
+    
+    func settingLable(title:String, imgName:String) -> NSMutableAttributedString {
+        let attributedString = NSMutableAttributedString(string: "")
+        let imageAttachment = NSTextAttachment()
+        attributedString.append(NSAttributedString(string:"\(title)"))
+        imageAttachment.image = UIImage(named: "\(imgName)")
+        imageAttachment.bounds = CGRect(x: 0, y: 0, width: 20, height: 20)
+        attributedString.append(NSAttributedString(attachment: imageAttachment))
+        return attributedString
     }
 }
