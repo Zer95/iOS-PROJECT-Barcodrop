@@ -17,6 +17,11 @@ class CategoryViewController: UIViewController {
     let contentView = UIView()
     let headerTipView = CategoryView()
     
+    let freshView = ListView(title: "냉장")
+    let iceView = ListView(title: "냉동")
+    let roomView = ListView(title: "실온")
+    let etcView = ListView(title: "기타")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
@@ -29,6 +34,10 @@ class CategoryViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(headerTipView)
+        contentView.addSubview(freshView)
+        contentView.addSubview(iceView)
+        contentView.addSubview(roomView)
+        contentView.addSubview(etcView)
         
         scrollView.snp.makeConstraints {
             $0.top.left.right.equalToSuperview()
@@ -38,7 +47,7 @@ class CategoryViewController: UIViewController {
         contentView.snp.makeConstraints {
             $0.edges.equalToSuperview()
             $0.width.equalTo(device.screenWidth)
-            $0.height.equalTo(device.screenHeight + 100)
+            $0.height.equalTo(1400)
         }
         
         headerTipView.snp.makeConstraints {
@@ -46,6 +55,30 @@ class CategoryViewController: UIViewController {
             $0.left.right.equalToSuperview()
             $0.height.equalTo(400)
         }
+        
+        freshView.snp.makeConstraints {
+             $0.top.equalTo(headerTipView.snp.bottom).offset(20)
+             $0.left.right.equalToSuperview()
+             $0.height.equalTo(200)
+         }
+        
+        iceView.snp.makeConstraints {
+             $0.top.equalTo(freshView.snp.bottom).offset(20)
+             $0.left.right.equalToSuperview()
+             $0.height.equalTo(200)
+         }
+        
+        roomView.snp.makeConstraints {
+             $0.top.equalTo(iceView.snp.bottom).offset(20)
+             $0.left.right.equalToSuperview()
+             $0.height.equalTo(200)
+         }
+        
+        etcView.snp.makeConstraints {
+             $0.top.equalTo(roomView.snp.bottom).offset(20)
+             $0.left.right.equalToSuperview()
+             $0.height.equalTo(200)
+         }
         
     }
     
