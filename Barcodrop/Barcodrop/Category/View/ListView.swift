@@ -29,10 +29,10 @@ class ListView: UIView {
         $0.layer.masksToBounds = false
     }
     
-    init(title: String) {
+    init(title: String, image: String) {
         super.init(frame: .zero)
         titleLabel.text = title
-        titleLabel.attributedText = settingLable(title: " \(title) ", imgName: "fresh_on.png")
+        titleLabel.attributedText = settingLable(title: " \(title) ", imgName: "\(image)")
         titleLabel.sizeToFit()
     }
     
@@ -63,7 +63,7 @@ class ListView: UIView {
         let imageAttachment = NSTextAttachment()
         attributedString.append(NSAttributedString(string:"\(title)"))
         imageAttachment.image = UIImage(named: "\(imgName)")
-        imageAttachment.bounds = CGRect(x: 0, y: 0, width: 20, height: 20)
+        imageAttachment.bounds = CGRect(x: 0, y: 0, width: 18, height: 18)
         attributedString.append(NSAttributedString(attachment: imageAttachment))
         return attributedString
     }

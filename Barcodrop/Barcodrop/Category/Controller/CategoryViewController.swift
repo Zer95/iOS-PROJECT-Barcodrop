@@ -17,10 +17,10 @@ class CategoryViewController: UIViewController {
     let contentView = UIView()
     let headerTipView = CategoryView()
     
-    let freshView = ListView(title: "냉장")
-    let iceView = ListView(title: "냉동")
-    let roomView = ListView(title: "실온")
-    let etcView = ListView(title: "기타")
+    let freshView = ListView(title: "냉장", image: "fresh_on.png")
+    let iceView = ListView(title: "냉동", image: "ice_on.png")
+    let roomView = ListView(title: "실온", image: "room_on.png")
+    let etcView = ListView(title: "기타", image: "etc_on.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
