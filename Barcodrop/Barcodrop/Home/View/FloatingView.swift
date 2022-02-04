@@ -13,6 +13,7 @@ class FloatingView: UIViewController {
     
     let scanButton = UIButton().then {
         $0.setImage(UIImage(named: "Floating_Scan"), for: .normal)
+        $0.addTarget(self, action: #selector(alert), for: .touchDown)
         $0.snp.makeConstraints {
             $0.width.equalTo(200)
             $0.height.equalTo(300)
@@ -21,6 +22,7 @@ class FloatingView: UIViewController {
     
     let editButton = UIButton().then {
         $0.setImage(UIImage(named: "Floating_Edit"), for: .normal)
+        $0.addTarget(self, action: #selector(alert), for: .touchDown)
         $0.snp.makeConstraints {
             $0.width.equalTo(200)
             $0.height.equalTo(300)
@@ -37,7 +39,6 @@ class FloatingView: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(white: 0x000000, alpha: 0.4)
-        
         configureUI()
         
         // 화면 터치시 view dismiss
@@ -59,5 +60,9 @@ class FloatingView: UIViewController {
     
     @objc func viewMapTapped(sender: UITapGestureRecognizer) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func alert() {
+        self.presentOkOnlyAlert(title: "알림", message: "업데이트 예정입니다.", handler: nil)
     }
 }
