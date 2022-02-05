@@ -14,6 +14,7 @@
 		D23E92AE279C3F880093AC28 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92AD279C3F880093AC28 /* SettingViewController.swift */; };
 		D23E92B0279C43EC0093AC28 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92AF279C43EC0093AC28 /* StatusViewController.swift */; };
 		D23E92B4279C51440093AC28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E92B3279C51440093AC28 /* HomeView.swift */; };
+		D23EFC3027AEA89D0041E227 /* ListHeaderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23EFC2F27AEA89D0041E227 /* ListHeaderItem.swift */; };
 		D24016E6279EDE63008F763B /* FloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016E5279EDE63008F763B /* FloatingView.swift */; };
 		D24016EC27A41013008F763B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016EB27A41013008F763B /* Log.swift */; };
 		D24016EE27A5725E008F763B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016ED27A5725E008F763B /* Device.swift */; };
@@ -40,6 +41,7 @@
 		D23E92AD279C3F880093AC28 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D23E92AF279C43EC0093AC28 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		D23E92B3279C51440093AC28 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D23EFC2F27AEA89D0041E227 /* ListHeaderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderItem.swift; sourceTree = "<group>"; };
 		D24016E5279EDE63008F763B /* FloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingView.swift; sourceTree = "<group>"; };
 		D24016EB27A41013008F763B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		D24016ED27A5725E008F763B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C6234627A1750A000D6D62 /* CategoryView.swift */,
+				D23EFC2F27AEA89D0041E227 /* ListHeaderItem.swift */,
 				D265AE2427ABCE6800390A05 /* ListView.swift */,
 			);
 			path = View;
@@ -365,6 +368,7 @@
 				D24016F027A82EB5008F763B /* UIFont.swift in Sources */,
 				D2674A76279D1DD80044A957 /* HelpPopUpView.swift in Sources */,
 				D23E92AA279C3F6E0093AC28 /* HomeViewController.swift in Sources */,
+				D23EFC3027AEA89D0041E227 /* ListHeaderItem.swift in Sources */,
 				D23E92B0279C43EC0093AC28 /* StatusViewController.swift in Sources */,
 				D23E92AE279C3F880093AC28 /* SettingViewController.swift in Sources */,
 				D2674A74279D12560044A957 /* HomeProductCollectionViewCell.swift in Sources */,

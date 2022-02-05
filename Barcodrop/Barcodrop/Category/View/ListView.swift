@@ -11,6 +11,8 @@ import Then
 
 class ListView: UIView {
     
+    let listHeaderItem = ListHeaderItem()
+    
     let titleLabel = UILabel().then {
         $0.font = UIFont.boldSystemFont(ofSize: 18)
         $0.textColor = .black
@@ -52,6 +54,11 @@ class ListView: UIView {
             $0.left.equalToSuperview().offset(24)
             $0.right.equalToSuperview().inset(24)
             $0.bottom.equalToSuperview().inset(24)
+        }
+        
+        contentView.addSubview(listHeaderItem)
+        listHeaderItem.snp.makeConstraints {
+            $0.top.left.right.equalToSuperview()
         }
     }
     
