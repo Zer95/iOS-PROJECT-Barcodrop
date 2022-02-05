@@ -13,6 +13,7 @@ class ListView: UIView {
     
     let titleLabel = UILabel().then {
         $0.font = UIFont.boldSystemFont(ofSize: 18)
+        $0.textColor = .black
         $0.textAlignment = .natural
     }
     
