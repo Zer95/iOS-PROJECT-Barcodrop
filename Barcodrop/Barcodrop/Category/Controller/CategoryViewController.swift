@@ -32,7 +32,6 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         configureUI()
-        imageSwipeSetting()
     }
     
     func configureUI() {
@@ -81,41 +80,8 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     // cell Height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        return 280
     }
     
-    
-}
-
-// MARK: - Header Image Swipe
-
-extension CategoryViewController {
-    
-    func imageSwipeSetting() {
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(CategoryViewController.respondToSwipeGesture(_:)))
-        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(swipeLeft)
-        
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(CategoryViewController.respondToSwipeGesture(_:)))
-        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-        self.view.addGestureRecognizer(swipeRight)
-    }
-    
-    @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
-        
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer{
-            
-            switch swipeGesture.direction {
-            case UISwipeGestureRecognizer.Direction.left :
-                headerTipView.pageControl.currentPage -= 1
-                headerTipView.imageView.image = UIImage(named: Constant.categoryBannerImage[headerTipView.pageControl.currentPage])
-            case UISwipeGestureRecognizer.Direction.right :
-                headerTipView.pageControl.currentPage += 1
-                headerTipView.imageView.image = UIImage(named: Constant.categoryBannerImage[headerTipView.pageControl.currentPage])
-            default:
-                break
-            }
-        }
-    }
     
 }

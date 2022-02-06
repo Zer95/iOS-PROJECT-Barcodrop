@@ -25,6 +25,7 @@
 		D27712BB27AD4FF100FAF27C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27712BA27AD4FF100FAF27C /* UIViewController.swift */; };
 		D2C3CD2327AF8EFE00EE9FB5 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3CD2227AF8EFE00EE9FB5 /* ListTableViewCell.swift */; };
 		D2C3CD2527AFA2BC00EE9FB5 /* ImageToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3CD2427AFA2BC00EE9FB5 /* ImageToText.swift */; };
+		D2C3CD2727AFA50900EE9FB5 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3CD2627AFA50900EE9FB5 /* ListCollectionViewCell.swift */; };
 		D2C6234727A1750A000D6D62 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C6234627A1750A000D6D62 /* CategoryView.swift */; };
 		D2C6234A27A1785D000D6D62 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C6234927A1785D000D6D62 /* Constant.swift */; };
 		D2CBB69C279442130052F41E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CBB69B279442130052F41E /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 		D27712BA27AD4FF100FAF27C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D2C3CD2227AF8EFE00EE9FB5 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		D2C3CD2427AFA2BC00EE9FB5 /* ImageToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToText.swift; sourceTree = "<group>"; };
+		D2C3CD2627AFA50900EE9FB5 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2C6234627A1750A000D6D62 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		D2C6234927A1785D000D6D62 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D2CBB698279442130052F41E /* Barcodrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barcodrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 				D23EFC2F27AEA89D0041E227 /* ListHeaderItem.swift */,
 				D265AE2427ABCE6800390A05 /* ListView.swift */,
 				D2C3CD2227AF8EFE00EE9FB5 /* ListTableViewCell.swift */,
+				D2C3CD2627AFA50900EE9FB5 /* ListCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				D24016F027A82EB5008F763B /* UIFont.swift in Sources */,
 				D2674A76279D1DD80044A957 /* HelpPopUpView.swift in Sources */,
 				D23E92AA279C3F6E0093AC28 /* HomeViewController.swift in Sources */,
+				D2C3CD2727AFA50900EE9FB5 /* ListCollectionViewCell.swift in Sources */,
 				D23EFC3027AEA89D0041E227 /* ListHeaderItem.swift in Sources */,
 				D23E92B0279C43EC0093AC28 /* StatusViewController.swift in Sources */,
 				D23E92AE279C3F880093AC28 /* SettingViewController.swift in Sources */,
