@@ -98,7 +98,6 @@
 		D23E92A8279C3F5C0093AC28 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				D23E92AF279C43EC0093AC28 /* StatusViewController.swift */,
 				D23E92AD279C3F880093AC28 /* SettingViewController.swift */,
 			);
 			path = VC;
@@ -176,6 +175,22 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		D2C3CD2B27AFCE1C00EE9FB5 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				D2C3CD2C27AFCE3D00EE9FB5 /* Controller */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		D2C3CD2C27AFCE3D00EE9FB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D23E92AF279C43EC0093AC28 /* StatusViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D2C6234327A1744F000D6D62 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +255,7 @@
 				D2C6234827A177F4000D6D62 /* Common */,
 				D23E92B1279C51260093AC28 /* Home */,
 				D2C6234327A1744F000D6D62 /* Category */,
+				D2C3CD2B27AFCE1C00EE9FB5 /* Status */,
 				D23E92A8279C3F5C0093AC28 /* VC */,
 				D2CBB6A4279442130052F41E /* Assets.xcassets */,
 				D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */,

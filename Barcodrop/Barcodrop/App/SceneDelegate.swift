@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let categoryVC = CategoryViewController()
         categoryVC.tabBarItem = UITabBarItem(title: "카테고리", image: UIImage(systemName: "circle.grid.3x3.fill")!, tag: 0)
         
-        let statusVC = SettingViewController()
+        let statusVC = StatusViewController()
         statusVC.tabBarItem = UITabBarItem(title: "상태", image:  UIImage(systemName: "chart.bar.doc.horizontal.fill")!, tag: 0)
         
         let settingVC = SettingViewController()
