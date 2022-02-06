@@ -19,6 +19,7 @@ class HelpPopUpView: UIViewController {
     
     let contentLabel = UILabel().then {
         $0.text = "등록한 상품을 날짜순, 입력순, 이름순, 구입순 으로 조회 할 수 있어요!"
+        $0.textColor = .black
         $0.font = UIFont.boldSystemFont(ofSize: 14)
         $0.numberOfLines = 10
         $0.textAlignment = .natural

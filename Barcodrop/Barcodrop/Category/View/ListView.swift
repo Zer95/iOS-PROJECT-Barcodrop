@@ -13,12 +13,6 @@ class ListView: UIView {
     
     let listHeaderItem = ListHeaderItem()
     
-    let titleLabel = UILabel().then {
-        $0.font = UIFont.boldSystemFont(ofSize: 18)
-        $0.textColor = .black
-        $0.textAlignment = .natural
-    }
-    
     let contentView = UIView().then {
         $0.backgroundColor = .white
         $0.layer.cornerRadius = 10
@@ -32,25 +26,22 @@ class ListView: UIView {
         $0.layer.masksToBounds = false
     }
     
-    init(title: String, image: String) {
-        super.init(frame: .zero)
-        titleLabel.text = title
-        titleLabel.attributedText = settingLable(title: " \(title) ", imgName: "\(image)")
-        titleLabel.sizeToFit()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .white
+        configureUI()
     }
     
-    override func layoutSubviews() {
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configureUI() {
         super.layoutSubviews()
-        
-        addSubview(titleLabel)
-        titleLabel.snp.makeConstraints {
-            $0.top.equalTo(20)
-            $0.left.equalToSuperview().offset(24)
-        }
         
         addSubview(contentView)
         contentView.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(5)
+            $0.top.equalToSuperview()
             $0.left.equalToSuperview().offset(24)
             $0.right.equalToSuperview().inset(24)
             $0.bottom.equalToSuperview().inset(24)
@@ -62,9 +53,6 @@ class ListView: UIView {
         }
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("error")
-    }
     
     func settingLable(title:String, imgName:String) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString(string: "")

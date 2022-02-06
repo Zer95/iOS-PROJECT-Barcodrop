@@ -11,16 +11,22 @@ import Then
 
 class CategoryViewController: UIViewController {
     
-    let scrollView = UIScrollView().then {
-        $0.contentInsetAdjustmentBehavior = .never // * 공백 제거
-    }
-    let contentView = UIView()
-    let headerTipView = CategoryView()
+    let listTableViewCell = "ListTableViewCell"
     
-    let freshView = ListView(title: "냉장", image: "fresh_on.png")
-    let iceView = ListView(title: "냉동", image: "ice_on.png")
-    let roomView = ListView(title: "실온", image: "room_on.png")
-    let etcView = ListView(title: "기타", image: "etc_on.png")
+    let headerTipView = CategoryView().then {
+        $0.snp.makeConstraints {
+            $0.width.equalTo(device.screenWidth)
+            $0.height.equalTo(400)
+        }
+    }
+    
+    lazy var categoryTableView = UITableView(frame: .zero, style: .grouped).then {
+        $0.separatorStyle = .none
+        $0.backgroundColor = .white
+        $0.showsVerticalScrollIndicator = false
+        $0.contentInsetAdjustmentBehavior = .never // * safeArea 공백 제거
+        $0.register(ListTableViewCell.self, forCellReuseIdentifier: listTableViewCell)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,56 +37,51 @@ class CategoryViewController: UIViewController {
     
     func configureUI() {
         
-        view.addSubview(scrollView)
-        scrollView.addSubview(contentView)
-        contentView.addSubview(headerTipView)
-        contentView.addSubview(freshView)
-        contentView.addSubview(iceView)
-        contentView.addSubview(roomView)
-        contentView.addSubview(etcView)
+        categoryTableView.delegate = self
+        categoryTableView.dataSource = self
+        categoryTableView.backgroundColor = .white
         
-        scrollView.snp.makeConstraints {
+        view.addSubview(categoryTableView)
+        categoryTableView.snp.makeConstraints {
             $0.top.left.right.equalToSuperview()
             $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
         }
-
-        contentView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-            $0.width.equalTo(device.screenWidth)
-            $0.height.equalTo(1400)
-        }
-        
-        headerTipView.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.left.right.equalToSuperview()
-            $0.height.equalTo(400)
-        }
-        
-        freshView.snp.makeConstraints {
-             $0.top.equalTo(headerTipView.snp.bottom).offset(20)
-             $0.left.right.equalToSuperview()
-             $0.height.equalTo(200)
-         }
-        
-        iceView.snp.makeConstraints {
-             $0.top.equalTo(freshView.snp.bottom).offset(20)
-             $0.left.right.equalToSuperview()
-             $0.height.equalTo(200)
-         }
-        
-        roomView.snp.makeConstraints {
-             $0.top.equalTo(iceView.snp.bottom).offset(20)
-             $0.left.right.equalToSuperview()
-             $0.height.equalTo(200)
-         }
-        
-        etcView.snp.makeConstraints {
-             $0.top.equalTo(roomView.snp.bottom).offset(20)
-             $0.left.right.equalToSuperview()
-             $0.height.equalTo(200)
-         }
         
     }
+    
+}
+
+// MARK: - TalbleView : categoryTableView
+
+
+extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    //header Height
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 400
+    }
+    
+    //header View
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return headerTipView
+    }
+    
+    // table Count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        4
+    }
+    
+    // cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = categoryTableView.dequeueReusableCell(withIdentifier: listTableViewCell, for: indexPath) as! ListTableViewCell
+        return cell
+    }
+    
+    // cell Height
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+    
     
 }
 
@@ -112,9 +113,7 @@ extension CategoryViewController {
             default:
                 break
             }
-            
         }
-        
     }
     
 }
