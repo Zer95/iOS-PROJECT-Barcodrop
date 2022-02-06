@@ -68,12 +68,14 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     // table Count
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        Constant.categoryList.count
     }
     
     // cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = categoryTableView.dequeueReusableCell(withIdentifier: listTableViewCell, for: indexPath) as! ListTableViewCell
+        cell.categoryLabel.attributedText = settingLable(title: "\(Constant.categoryList[indexPath.row])",
+                                                         imgName: "\(Constant.categoryImageList[indexPath.row])")
         return cell
     }
     
@@ -106,10 +108,10 @@ extension CategoryViewController {
             switch swipeGesture.direction {
             case UISwipeGestureRecognizer.Direction.left :
                 headerTipView.pageControl.currentPage -= 1
-                headerTipView.imageView.image = UIImage(named: Constant.categoryImageList[headerTipView.pageControl.currentPage])
+                headerTipView.imageView.image = UIImage(named: Constant.categoryBannerImage[headerTipView.pageControl.currentPage])
             case UISwipeGestureRecognizer.Direction.right :
                 headerTipView.pageControl.currentPage += 1
-                headerTipView.imageView.image = UIImage(named: Constant.categoryImageList[headerTipView.pageControl.currentPage])
+                headerTipView.imageView.image = UIImage(named: Constant.categoryBannerImage[headerTipView.pageControl.currentPage])
             default:
                 break
             }

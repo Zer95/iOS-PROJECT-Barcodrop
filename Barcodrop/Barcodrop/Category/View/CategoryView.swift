@@ -35,7 +35,7 @@ class CategoryView: UIView {
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        imageView.image = UIImage(named: String(Constant.categoryImageList[0]))
+        imageView.image = UIImage(named: String(Constant.categoryBannerImage[0]))
         timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(autoChange), userInfo: nil, repeats: true)
     }
     
@@ -61,7 +61,7 @@ class CategoryView: UIView {
             autoNum = 0
         }
         pageControl.currentPage = autoNum
-        imageView.image = UIImage(named: String(Constant.categoryImageList[autoNum]))
+        imageView.image = UIImage(named: String(Constant.categoryBannerImage[autoNum]))
         autoNum += 1
     }
     
