@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
         $0.register(HomeProductCollectionViewCell.self, forCellWithReuseIdentifier: homeProductCollectionViewCell)
         $0.backgroundColor = .white
         $0.isScrollEnabled =  true
+        $0.delegate = self
+        $0.dataSource = self
     }
     
     private let layout = UICollectionViewFlowLayout().then {
@@ -33,15 +35,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         view.backgroundColor = .white
-        configureDelegate()
         configureUI()
         dropDownSetting()
-    }
-    
-    private func configureDelegate() {
         homeView.delegate = self
-        homeProductCollectionView.delegate = self
-        homeProductCollectionView.dataSource = self
     }
     
     private func configureUI() {

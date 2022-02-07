@@ -26,6 +26,9 @@ class CategoryViewController: UIViewController {
         $0.showsVerticalScrollIndicator = false
         $0.contentInsetAdjustmentBehavior = .never // * safeArea 공백 제거
         $0.register(ListTableViewCell.self, forCellReuseIdentifier: listTableViewCell)
+        $0.delegate = self
+        $0.dataSource = self
+        $0.backgroundColor = .white
     }
     
     override func viewDidLoad() {
@@ -36,16 +39,11 @@ class CategoryViewController: UIViewController {
     
     func configureUI() {
         
-        categoryTableView.delegate = self
-        categoryTableView.dataSource = self
-        categoryTableView.backgroundColor = .white
-        
         view.addSubview(categoryTableView)
         categoryTableView.snp.makeConstraints {
             $0.top.left.right.equalToSuperview()
             $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
         }
-        
     }
     
 }
