@@ -72,7 +72,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     
     func dropDownSetting() {
-        dropDown.dataSource = ["날짜순", "이름순", "구입순", "등록순"]
+        dropDown.dataSource = Constant.homeSortList
         dropDown.anchorView = homeView.sortButton
         
         dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!) // 출력방식 가리지 않고 표현
@@ -80,7 +80,7 @@ extension HomeViewController {
         dropDown.cellHeight = 50
         dropDown.cornerRadius = 15
         dropDown.selectedTextColor = UIColor.white // 선택된 글씨 색상
-        dropDown.selectionBackgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1) // 선택된 배경 색상
+        dropDown.selectionBackgroundColor = #colorLiteral(red: 1, green: 0.7276403904, blue: 0.4232866168, alpha: 1) // 선택된 배경 색상
         dropDown.textFont = UIFont.systemFont(ofSize: 20)
         
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
