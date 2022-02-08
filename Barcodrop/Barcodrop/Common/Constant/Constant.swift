@@ -9,6 +9,14 @@ import Foundation
 
 struct Constant {
     
+    // 홈 데이터 정렬 리스트
+    static let homeSortList = [
+        "날짜순",
+        "이름순",
+        "구입순",
+        "등록순"
+    ]
+    
     // 카테고리 헤더 배너 이미지
     static let categoryBannerImage = [
         "tip1.jpg",
