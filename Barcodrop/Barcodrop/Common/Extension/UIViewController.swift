@@ -18,4 +18,16 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    // MARK: 빈 화면을 눌렀을 때 키보드가 내려가도록 처리
+    func dismissKeyboard() {
+        let tap: UITapGestureRecognizer =
+            UITapGestureRecognizer(target: self, action: #selector(self.endEditing))
+        tap.cancelsTouchesInView = true
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func endEditing() {
+        self.view.endEditing(false)
+    }
+    
 }
