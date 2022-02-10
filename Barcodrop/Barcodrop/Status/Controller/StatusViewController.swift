@@ -14,13 +14,9 @@ import Then
 class StatusViewController: UIViewController {
     
     // Temp Data
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
-    let unitsSold = [10.0, 4.0, 6.0, 3.0, 12.0, 16.0]
-    let track = ["Frech", "Ice", "Room", "Etc"]
-    let money = [650, 456.13, 78.67, 856.52]
-    
-    
-    
+    let category = ["냉장", "냉동", "실온", "기타"]
+    let value = [650, 456.13, 78.67, 856.52]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -29,7 +25,6 @@ class StatusViewController: UIViewController {
     }
  
 }
-
 
 // MARK: - PieChart : Setting
 
@@ -40,14 +35,14 @@ extension StatusViewController {
         let chart = PieChartView(frame: self.view.frame)
         var entries = [PieChartDataEntry]()
         
-        for (index, value) in money.enumerated() {
+        for (index, value) in value.enumerated() {
             let entry = PieChartDataEntry()
             entry.y = value
-            entry.label = track[index]
-            entries.append( entry)
+            entry.label = category[index]
+            entries.append(entry)
         }
         
-        let set = PieChartDataSet( entries: entries, label: "Pie Chart")
+        let set = PieChartDataSet( entries: entries, label: "")
         let data = PieChartData(dataSet: set)
         chart.data = data
         chart.noDataText = "No data available"
@@ -83,7 +78,7 @@ extension StatusViewController {
             $0.top.equalToSuperview().offset(10)
             $0.left.equalToSuperview().offset(24)
             $0.width.equalTo(200)
-            $0.height.equalTo(400)
+            $0.height.equalTo(300)
         }
     }
     
