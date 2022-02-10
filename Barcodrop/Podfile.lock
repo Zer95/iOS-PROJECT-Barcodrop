@@ -1,5 +1,8 @@
 PODS:
   - CBFlashyTabBarController (0.8.3)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - DropDown (2.3.13)
   - MaterialComponents/AnimationTiming (124.2.0)
   - MaterialComponents/Availability (124.2.0)
@@ -56,6 +59,7 @@ PODS:
 
 DEPENDENCIES:
   - CBFlashyTabBarController
+  - Charts
   - DropDown
   - MaterialComponents/Buttons
   - SnapKit (~> 5.0.0)
@@ -64,6 +68,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CBFlashyTabBarController
+    - Charts
     - DropDown
     - MaterialComponents
     - MDFInternationalization
@@ -73,6 +78,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CBFlashyTabBarController: bc6b11dd4cbc9b54785c8944156e2f4d4f03b088
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
@@ -80,6 +86,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: 96a914aafbdd41f198778a27f340b2e0d25ecdf2
+PODFILE CHECKSUM: 348b4b3abc4a1997aa505416b04dc200ed1569af
 
 COCOAPODS: 1.11.2

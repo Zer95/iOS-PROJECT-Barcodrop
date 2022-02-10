@@ -11,4 +11,5 @@ target 'Barcodrop' do
     pod 'Then'
     pod 'DropDown'		
     pod 'MaterialComponents/Buttons' 
+    pod 'Charts'
 end

@@ -177,6 +177,7 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework"
@@ -186,6 +187,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework"
