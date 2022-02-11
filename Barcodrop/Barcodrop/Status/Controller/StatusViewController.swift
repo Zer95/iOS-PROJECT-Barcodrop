@@ -18,6 +18,10 @@ class StatusViewController: UIViewController {
     var pieChartView: PieChartView!
     let statusSideView = StatusSideView()
     
+    let lineView = UIView().then {
+        $0.backgroundColor = .orange
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -40,6 +44,13 @@ class StatusViewController: UIViewController {
         statusSideView.snp.makeConstraints {
             $0.centerY.equalTo(pieChartView)
             $0.left.equalTo(pieChartView.snp.right).offset(50)
+        }
+        
+        view.addSubview(lineView)
+        lineView.snp.makeConstraints {
+            $0.top.equalTo(pieChartView.snp.bottom).offset(20)
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(1)
         }
     }
     
