@@ -93,10 +93,13 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             
         case 0:
             cell.contentLabel.text = viewModel.section1[indexPath.row].name
+            cell.settingData = viewModel.section1[indexPath.row]
         case 1:
             cell.contentLabel.text = viewModel.section2[indexPath.row].name
+            cell.settingData = viewModel.section2[indexPath.row]
         case 2:
             cell.contentLabel.text = viewModel.section3[indexPath.row].name
+            cell.settingData = viewModel.section3[indexPath.row]
         default:
             cell.contentLabel.text = ""
         }

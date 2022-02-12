@@ -20,6 +20,11 @@ class SettingTableViewCell: UITableViewCell {
     
     let switchButton = UISwitch().then {
         $0.backgroundColor = .clear
+        $0.isHidden = true
+    }
+    
+    var settingData: SettingModel? {
+        didSet { setData() }
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -39,11 +44,27 @@ class SettingTableViewCell: UITableViewCell {
             $0.left.equalToSuperview().offset(16)
         }
         
-        //        addSubview(switchButton)
-        //        switchButton.snp.makeConstraints {
-        //            $0.centerY.equalToSuperview()
-        //            $0.right.equalToSuperview().inset(16)
-        //        }
+        addSubview(switchButton)
+        switchButton.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.right.equalToSuperview().inset(16)
+        }
+    }
+    
+    func setData() {
+        guard let data = settingData else { return }
+        
+        if data.switchButton == true {
+            switchButton.isHidden = false
+        }
+        
+        if data.nextButton == true {
+            
+        }
+        
+        if data.nextLabel == true {
+            
+        }
     }
     
 }
