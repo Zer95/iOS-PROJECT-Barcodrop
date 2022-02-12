@@ -101,12 +101,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D23E92A8279C3F5C0093AC28 /* VC */ = {
+		D23E92A8279C3F5C0093AC28 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				D23E92AD279C3F880093AC28 /* SettingViewController.swift */,
+				D2AFCB5927B7D004005A170E /* Controller */,
 			);
-			path = VC;
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		D23E92B1279C51260093AC28 /* Home */ = {
@@ -189,6 +189,14 @@
 				D2C6234927A1785D000D6D62 /* Constant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		D2AFCB5927B7D004005A170E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D23E92AD279C3F880093AC28 /* SettingViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D2C2C3D027B14E5600A17A47 /* Cells */ = {
@@ -281,7 +289,7 @@
 				D23E92B1279C51260093AC28 /* Home */,
 				D2C6234327A1744F000D6D62 /* Category */,
 				D2C3CD2B27AFCE1C00EE9FB5 /* Status */,
-				D23E92A8279C3F5C0093AC28 /* VC */,
+				D23E92A8279C3F5C0093AC28 /* Setting */,
 				D2CBB6A4279442130052F41E /* Assets.xcassets */,
 				D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */,
 				D23E92A5279C3C070093AC28 /* Main.storyboard */,
