@@ -62,13 +62,13 @@ class ListTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         self.backgroundColor = .white
         
-        addSubview(categoryLabel)
+        contentView.addSubview(categoryLabel)
         categoryLabel.snp.makeConstraints {
             $0.top.equalTo(20)
             $0.left.equalToSuperview().offset(26)
         }
         
-        addSubview(listView)
+        contentView.addSubview(listView)
         listView.snp.makeConstraints {
             $0.top.equalTo(categoryLabel.snp.bottom).offset(5)
             $0.left.equalToSuperview().offset(24)
