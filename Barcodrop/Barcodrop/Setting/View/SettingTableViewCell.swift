@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 class SettingTableViewCell: UITableViewCell {
 
@@ -14,6 +16,10 @@ class SettingTableViewCell: UITableViewCell {
         $0.textColor = .black
         $0.textAlignment = .natural
         $0.text = "냉장"
+    }
+    
+    let switchButton = UISwitch().then {
+        $0.backgroundColor = .clear
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -26,11 +32,18 @@ class SettingTableViewCell: UITableViewCell {
     }
     
     private func configureUI() {
+        
         addSubview(contentLabel)
         contentLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.left.equalToSuperview().offset(16)
         }
+        
+//        addSubview(switchButton)
+//        switchButton.snp.makeConstraints {
+//            $0.centerY.equalToSuperview()
+//            $0.right.equalToSuperview().inset(16)
+//        }
     }
 
 }

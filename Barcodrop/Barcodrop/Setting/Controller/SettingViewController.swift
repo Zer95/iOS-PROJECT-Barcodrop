@@ -85,6 +85,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: settingTableViewCell) as! SettingTableViewCell
         
+        cell.selectionStyle = .none
+        
         switch indexPath.section {
             
         case 0:
