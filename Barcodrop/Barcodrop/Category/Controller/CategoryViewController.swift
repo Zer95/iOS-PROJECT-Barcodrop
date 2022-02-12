@@ -74,7 +74,7 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = categoryTableView.dequeueReusableCell(withIdentifier: listTableViewCell, for: indexPath) as! ListTableViewCell
         cell.categoryLabel.attributedText = settingLable(title: "\(Constant.categoryList[indexPath.row])",
                                                          imgName: "\(Constant.categoryImageList[indexPath.row])")
-        cell.updateCellWith(row: self.tempRows[indexPath.row])
+        cell.updateCellWith(index:indexPath.row, row: self.tempRows[indexPath.row])
         return cell
     }
     

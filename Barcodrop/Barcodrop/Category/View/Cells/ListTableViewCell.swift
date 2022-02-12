@@ -99,10 +99,18 @@ class ListTableViewCell: UITableViewCell {
 extension ListTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     // 데이터 셋팅
-    func updateCellWith(row: Int) {
+    func updateCellWith(index:Int, row: Int) {
         self.nowRows = row
         self.listCollectionView.reloadData()
         self.listCollectionView.setContentOffset(.zero, animated: false)
+        
+        if row  == 0 {
+            listCollectionView.backgroundView = UIImageView(image: UIImage(named: "\(Constant.categoryImageList[index])"))
+            listCollectionView.backgroundView?.contentMode = .scaleAspectFit
+        } else {
+            listCollectionView.backgroundView = UIImageView(image: nil)
+        }
+      
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
