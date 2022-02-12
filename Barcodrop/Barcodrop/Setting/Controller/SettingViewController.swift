@@ -9,11 +9,6 @@ import UIKit
 
 class SettingViewController: UIViewController {
     
-    let sectionModel = ["알림 설정", "Q&A", "기타"]
-    let section1 = ["ON", "알림 날짜 / 시간 설정"]
-    let section2 = ["자주 묻는 질문", "앱 사용법"]
-    let section3 = ["언어 설정", "데이터 초기화", "앱 버전확인"]
-    
     let settingTableViewCell = "SettingTableViewCell"
     
     let titleLabel = UILabel().then {
@@ -63,7 +58,7 @@ class SettingViewController: UIViewController {
 extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionModel.count
+        return Constant.sectionModel.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,11 +66,11 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
             
         case 0:
-            return section1.count
+            return Constant.section1.count
         case 1:
-            return section2.count
+            return Constant.section2.count
         case 2:
-            return section3.count
+            return Constant.section3.count
         default:
             return 0
         }
@@ -83,7 +78,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionModel[section]
+        return Constant.sectionModel[section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,11 +88,11 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
             
         case 0:
-            cell.contentLabel.text = section1[indexPath.row]
+            cell.contentLabel.text = Constant.section1[indexPath.row]
         case 1:
-            cell.contentLabel.text = section2[indexPath.row]
+            cell.contentLabel.text = Constant.section2[indexPath.row]
         case 2:
-            cell.contentLabel.text = section3[indexPath.row]
+            cell.contentLabel.text = Constant.section3[indexPath.row]
         default:
             cell.contentLabel.text = ""
         }
