@@ -13,6 +13,8 @@ class ListTableViewCell: UITableViewCell {
     
     let listCollectionViewCell = "ListCollectionViewCell"
     
+    var nowRows = 0
+    
     let categoryLabel = UILabel().then {
         $0.font = UIFont.boldSystemFont(ofSize: 18)
         $0.textColor = .black
@@ -96,8 +98,15 @@ class ListTableViewCell: UITableViewCell {
 
 extension ListTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    // 데이터 셋팅
+    func updateCellWith(row: Int) {
+        self.nowRows = row
+        self.listCollectionView.reloadData()
+        self.listCollectionView.setContentOffset(.zero, animated: false)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        return self.nowRows
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -12,6 +12,7 @@ import Then
 class CategoryViewController: UIViewController {
     
     let listTableViewCell = "ListTableViewCell"
+    let tempRows = [3,0,5,1]
     
     let headerTipView = CategoryView().then {
         $0.snp.makeConstraints {
@@ -73,6 +74,7 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = categoryTableView.dequeueReusableCell(withIdentifier: listTableViewCell, for: indexPath) as! ListTableViewCell
         cell.categoryLabel.attributedText = settingLable(title: "\(Constant.categoryList[indexPath.row])",
                                                          imgName: "\(Constant.categoryImageList[indexPath.row])")
+        cell.updateCellWith(row: self.tempRows[indexPath.row])
         return cell
     }
     
