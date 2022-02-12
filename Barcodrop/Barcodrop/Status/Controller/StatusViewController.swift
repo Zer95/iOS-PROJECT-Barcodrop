@@ -18,6 +18,7 @@ class StatusViewController: UIViewController {
     var pieChartView: PieChartView!
     let statusSideView = StatusSideView()
     let statusContentView = StatusContentView()
+    let statusHistoryView = StatusHistoryView()
     
     let lineView = UIView().then {
         $0.backgroundColor = .orange
@@ -57,6 +58,13 @@ class StatusViewController: UIViewController {
         view.addSubview(statusContentView)
         statusContentView.snp.makeConstraints {
             $0.top.equalTo(lineView.snp.bottom)
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(120)
+        }
+        
+        view.addSubview(statusHistoryView)
+        statusHistoryView.snp.makeConstraints {
+            $0.top.equalTo(statusContentView.snp.bottom).offset(10)
             $0.left.right.equalToSuperview()
         }
         
