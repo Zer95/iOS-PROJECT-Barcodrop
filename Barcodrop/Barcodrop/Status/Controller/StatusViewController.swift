@@ -13,10 +13,11 @@ import Then
 class StatusViewController: UIViewController {
     
     // Temp Data
-    let value = [650, 456.13, 78.67, 856.52] // Category Count Temp 값
+    let value = [1.0, 1.0, 1.0, 1.0] // Category Count Temp 값
     
     var pieChartView: PieChartView!
     let statusSideView = StatusSideView()
+    let statusContentView = StatusContentView()
     
     let lineView = UIView().then {
         $0.backgroundColor = .orange
@@ -52,6 +53,13 @@ class StatusViewController: UIViewController {
             $0.left.right.equalToSuperview()
             $0.height.equalTo(1)
         }
+        
+        view.addSubview(statusContentView)
+        statusContentView.snp.makeConstraints {
+            $0.top.equalTo(lineView.snp.bottom)
+            $0.left.right.equalToSuperview()
+        }
+        
     }
     
 }
@@ -101,6 +109,7 @@ extension StatusViewController {
         pieChartView.centerText = "ALL"
         set.entryLabelFont = UIFont.systemFont(ofSize: 0.1, weight: .bold)
         set.valueFont = UIFont.systemFont(ofSize: 0.1, weight: .bold)
+      
         
     }
     
