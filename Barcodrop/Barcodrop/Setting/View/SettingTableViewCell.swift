@@ -10,7 +10,7 @@ import SnapKit
 import Then
 
 class SettingTableViewCell: UITableViewCell {
-
+    
     let contentLabel = UILabel().then {
         $0.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         $0.textColor = .black
@@ -39,11 +39,11 @@ class SettingTableViewCell: UITableViewCell {
             $0.left.equalToSuperview().offset(16)
         }
         
-//        addSubview(switchButton)
-//        switchButton.snp.makeConstraints {
-//            $0.centerY.equalToSuperview()
-//            $0.right.equalToSuperview().inset(16)
-//        }
+        //        addSubview(switchButton)
+        //        switchButton.snp.makeConstraints {
+        //            $0.centerY.equalToSuperview()
+        //            $0.right.equalToSuperview().inset(16)
+        //        }
     }
-
+    
 }

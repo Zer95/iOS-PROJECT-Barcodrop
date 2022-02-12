@@ -27,6 +27,8 @@
 		D27712BB27AD4FF100FAF27C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27712BA27AD4FF100FAF27C /* UIViewController.swift */; };
 		D27CB91127B556BC00765C04 /* StatusSideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27CB91027B556BC00765C04 /* StatusSideView.swift */; };
 		D2AFCB5B27B7D7FF005A170E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFCB5A27B7D7FF005A170E /* SettingTableViewCell.swift */; };
+		D2AFCB5E27B7E2B6005A170E /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFCB5D27B7E2B6005A170E /* SettingModel.swift */; };
+		D2AFCB6027B7E403005A170E /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFCB5F27B7E403005A170E /* SettingViewModel.swift */; };
 		D2C3CD2327AF8EFE00EE9FB5 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3CD2227AF8EFE00EE9FB5 /* ListTableViewCell.swift */; };
 		D2C3CD2527AFA2BC00EE9FB5 /* ImageToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3CD2427AFA2BC00EE9FB5 /* ImageToText.swift */; };
 		D2C3CD2727AFA50900EE9FB5 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3CD2627AFA50900EE9FB5 /* ListCollectionViewCell.swift */; };
@@ -61,6 +63,8 @@
 		D27712BA27AD4FF100FAF27C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D27CB91027B556BC00765C04 /* StatusSideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSideView.swift; sourceTree = "<group>"; };
 		D2AFCB5A27B7D7FF005A170E /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		D2AFCB5D27B7E2B6005A170E /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		D2AFCB5F27B7E403005A170E /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		D2C3CD2227AF8EFE00EE9FB5 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		D2C3CD2427AFA2BC00EE9FB5 /* ImageToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToText.swift; sourceTree = "<group>"; };
 		D2C3CD2627AFA50900EE9FB5 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 		D23E92A8279C3F5C0093AC28 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				D2AFCB6127B7E68D005A170E /* Model */,
+				D2AFCB6227B7E69C005A170E /* ViewModel */,
 				D2AFCB5C27B7DC16005A170E /* View */,
 				D2AFCB5927B7D004005A170E /* Controller */,
 			);
@@ -208,6 +214,22 @@
 				D2AFCB5A27B7D7FF005A170E /* SettingTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D2AFCB6127B7E68D005A170E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2AFCB5D27B7E2B6005A170E /* SettingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2AFCB6227B7E69C005A170E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2AFCB5F27B7E403005A170E /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D2C2C3D027B14E5600A17A47 /* Cells */ = {
@@ -440,10 +462,12 @@
 				D27712BB27AD4FF100FAF27C /* UIViewController.swift in Sources */,
 				D2C6234727A1750A000D6D62 /* CategoryView.swift in Sources */,
 				D24016F027A82EB5008F763B /* UIFont.swift in Sources */,
+				D2AFCB6027B7E403005A170E /* SettingViewModel.swift in Sources */,
 				D2674A76279D1DD80044A957 /* HelpPopUpView.swift in Sources */,
 				D23E92AA279C3F6E0093AC28 /* HomeViewController.swift in Sources */,
 				D2C3CD2727AFA50900EE9FB5 /* ListCollectionViewCell.swift in Sources */,
 				D23EFC3027AEA89D0041E227 /* ListHeaderItem.swift in Sources */,
+				D2AFCB5E27B7E2B6005A170E /* SettingModel.swift in Sources */,
 				D23E92B0279C43EC0093AC28 /* StatusViewController.swift in Sources */,
 				D23E92AE279C3F880093AC28 /* SettingViewController.swift in Sources */,
 				D2674A74279D12560044A957 /* HomeProductCollectionViewCell.swift in Sources */,

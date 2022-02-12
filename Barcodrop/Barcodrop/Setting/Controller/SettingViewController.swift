@@ -11,6 +11,8 @@ class SettingViewController: UIViewController {
     
     let settingTableViewCell = "SettingTableViewCell"
     
+    let viewModel = SettingViewModel()
+    
     let titleLabel = UILabel().then {
         $0.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         $0.textColor = .black
@@ -56,29 +58,29 @@ class SettingViewController: UIViewController {
 // MARK: - TalbleView : settingTableView
 
 extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return Constant.sectionModel.count
+        return viewModel.sectionCount
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch section {
             
         case 0:
-            return Constant.section1.count
+            return viewModel.section1.count
         case 1:
-            return Constant.section2.count
+            return viewModel.section2.count
         case 2:
-            return Constant.section3.count
+            return viewModel.section3.count
         default:
             return 0
         }
-    
+        
     }
-
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Constant.sectionModel[section]
+        return viewModel.sectionModelList[section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,15 +92,15 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
             
         case 0:
-            cell.contentLabel.text = Constant.section1[indexPath.row]
+            cell.contentLabel.text = viewModel.section1[indexPath.row].name
         case 1:
-            cell.contentLabel.text = Constant.section2[indexPath.row]
+            cell.contentLabel.text = viewModel.section2[indexPath.row].name
         case 2:
-            cell.contentLabel.text = Constant.section3[indexPath.row]
+            cell.contentLabel.text = viewModel.section3[indexPath.row].name
         default:
             cell.contentLabel.text = ""
         }
-     
+        
         return cell
     }
     
