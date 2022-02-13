@@ -55,6 +55,23 @@ class SettingViewController: UIViewController {
     }
 }
 
+
+// MARK: - TalbleView : settingTableView
+
+extension SettingViewController {
+    
+    func actionHandleFloating(type: PageType, identifier: Int) {
+        
+        if type == .pop {
+            let vc = viewModel.vcList[identifier]
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+}
+
 // MARK: - TalbleView : settingTableView
 
 extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
@@ -105,6 +122,31 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+            
+        case 0:
+            if viewModel.section1[indexPath.row].nextPage == true {
+                actionHandleFloating(type: viewModel.section1[indexPath.row].nextPageType,
+                                     identifier: viewModel.section1[indexPath.row].nextPageIdentifier)
+            }
+        case 1:
+            if viewModel.section2[indexPath.row].nextPage == true {
+                actionHandleFloating(type: viewModel.section2[indexPath.row].nextPageType,
+                                     identifier: viewModel.section2[indexPath.row].nextPageIdentifier)
+            }
+        case 2:
+            if viewModel.section3[indexPath.row].nextPage == true {
+                actionHandleFloating(type: viewModel.section3[indexPath.row].nextPageType,
+                                     identifier: viewModel.section3[indexPath.row].nextPageIdentifier)
+            }
+        default:
+            print("none")
+        }
+        
     }
     
 }
