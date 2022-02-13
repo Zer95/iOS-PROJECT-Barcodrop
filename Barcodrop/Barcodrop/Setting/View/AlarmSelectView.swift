@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Lottie
 
 class AlarmSelectView: UIView {
+    
+    let animation = AnimationView()
+    let animationView = UIView()
     
     let day0 = AlarmDayButton(title: "D-Day", tagIndex: 0)
     let day1 = AlarmDayButton(title: "D-1", tagIndex: 1)
@@ -35,6 +39,7 @@ class AlarmSelectView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .clear
+        animationSetting()
         configureUI()
     }
     
@@ -43,6 +48,18 @@ class AlarmSelectView: UIView {
     }
     
     private func configureUI() {
+        
+        addSubview(animationView)
+        animationView.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(150)
+        }
+        
+        animationView.addSubview(animation)
+        animation.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
         
         addSubview(dayStackButton)
         dayStackButton.snp.makeConstraints {
@@ -59,5 +76,14 @@ class AlarmSelectView: UIView {
         }
         
     }
+    
+    func animationSetting() {
+        animation.animation = Animation.named("AlarmSelect")
+        animation.frame = animationView.bounds
+        animation.contentMode = .scaleAspectFit
+        animation.loopMode = .playOnce
+        animation.play()
+    }
+    
     
 }
