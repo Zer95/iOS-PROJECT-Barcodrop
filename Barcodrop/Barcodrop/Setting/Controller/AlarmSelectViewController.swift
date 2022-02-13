@@ -11,10 +11,12 @@ import Then
 
 class AlarmSelectViewController: UIViewController {
     
+    let alarmSelectView = AlarmSelectView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(white: 0x000000, alpha: 0.4)
+        view.backgroundColor = UIColor(white: 0x000000, alpha: 0.7)
         configureUI()
         
         // 화면 터치시 view dismiss
@@ -24,7 +26,10 @@ class AlarmSelectViewController: UIViewController {
     
     
     func configureUI() {
-        super.viewDidLayoutSubviews()
+        view.addSubview(alarmSelectView)
+        alarmSelectView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
     

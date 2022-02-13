@@ -56,11 +56,11 @@ class SettingViewController: UIViewController {
 }
 
 
-// MARK: - TalbleView : settingTableView
+// MARK: - Present: SettingViewController
 
 extension SettingViewController {
     
-    func actionHandleFloating(type: PageType, identifier: Int) {
+    func actionMoveVC(type: PageType, identifier: Int) {
         
         if type == .pop {
             let vc = viewModel.vcList[identifier]
@@ -130,17 +130,17 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             
         case 0:
             if viewModel.section1[indexPath.row].nextPage == true {
-                actionHandleFloating(type: viewModel.section1[indexPath.row].nextPageType,
+                actionMoveVC(type: viewModel.section1[indexPath.row].nextPageType,
                                      identifier: viewModel.section1[indexPath.row].nextPageIdentifier)
             }
         case 1:
             if viewModel.section2[indexPath.row].nextPage == true {
-                actionHandleFloating(type: viewModel.section2[indexPath.row].nextPageType,
+                actionMoveVC(type: viewModel.section2[indexPath.row].nextPageType,
                                      identifier: viewModel.section2[indexPath.row].nextPageIdentifier)
             }
         case 2:
             if viewModel.section3[indexPath.row].nextPage == true {
-                actionHandleFloating(type: viewModel.section3[indexPath.row].nextPageType,
+                actionMoveVC(type: viewModel.section3[indexPath.row].nextPageType,
                                      identifier: viewModel.section3[indexPath.row].nextPageIdentifier)
             }
         default:

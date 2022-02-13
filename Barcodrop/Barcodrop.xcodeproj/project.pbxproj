@@ -22,6 +22,8 @@
 		D24016EE27A5725E008F763B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016ED27A5725E008F763B /* Device.swift */; };
 		D24016F027A82EB5008F763B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24016EF27A82EB5008F763B /* UIFont.swift */; };
 		D24FA4B127B8B88500B4C83C /* AlarmSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FA4B027B8B88500B4C83C /* AlarmSelectViewController.swift */; };
+		D24FA4B427B8C82200B4C83C /* AlarmSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FA4B327B8C82200B4C83C /* AlarmSelectView.swift */; };
+		D24FA4B627B8C9F300B4C83C /* AlarmDayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FA4B527B8C9F300B4C83C /* AlarmDayButton.swift */; };
 		D265AE2527ABCE6800390A05 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265AE2427ABCE6800390A05 /* ListView.swift */; };
 		D2674A74279D12560044A957 /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2674A73279D12560044A957 /* HomeProductCollectionViewCell.swift */; };
 		D2674A76279D1DD80044A957 /* HelpPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2674A75279D1DD80044A957 /* HelpPopUpView.swift */; };
@@ -59,6 +61,8 @@
 		D24016ED27A5725E008F763B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D24016EF27A82EB5008F763B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		D24FA4B027B8B88500B4C83C /* AlarmSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSelectViewController.swift; sourceTree = "<group>"; };
+		D24FA4B327B8C82200B4C83C /* AlarmSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSelectView.swift; sourceTree = "<group>"; };
+		D24FA4B527B8C9F300B4C83C /* AlarmDayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDayButton.swift; sourceTree = "<group>"; };
 		D265AE2427ABCE6800390A05 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D2674A73279D12560044A957 /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2674A75279D1DD80044A957 /* HelpPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPopUpView.swift; sourceTree = "<group>"; };
@@ -165,6 +169,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D24FA4B227B8C80A00B4C83C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2AFCB5A27B7D7FF005A170E /* SettingTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D27CB90F27B5567000765C04 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,7 +226,9 @@
 		D2AFCB5C27B7DC16005A170E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D2AFCB5A27B7D7FF005A170E /* SettingTableViewCell.swift */,
+				D24FA4B227B8C80A00B4C83C /* Cell */,
+				D24FA4B527B8C9F300B4C83C /* AlarmDayButton.swift */,
+				D24FA4B327B8C82200B4C83C /* AlarmSelectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +469,7 @@
 				D23E92B4279C51440093AC28 /* HomeView.swift in Sources */,
 				D27CB91127B556BC00765C04 /* StatusSideView.swift in Sources */,
 				D2C3CD2527AFA2BC00EE9FB5 /* ImageToText.swift in Sources */,
+				D24FA4B627B8C9F300B4C83C /* AlarmDayButton.swift in Sources */,
 				D24016EC27A41013008F763B /* Log.swift in Sources */,
 				D2CBB69C279442130052F41E /* AppDelegate.swift in Sources */,
 				D2CBB69E279442130052F41E /* SceneDelegate.swift in Sources */,
@@ -473,6 +488,7 @@
 				D23EFC3027AEA89D0041E227 /* ListHeaderItem.swift in Sources */,
 				D2AFCB5E27B7E2B6005A170E /* SettingModel.swift in Sources */,
 				D23E92B0279C43EC0093AC28 /* StatusViewController.swift in Sources */,
+				D24FA4B427B8C82200B4C83C /* AlarmSelectView.swift in Sources */,
 				D23E92AE279C3F880093AC28 /* SettingViewController.swift in Sources */,
 				D2674A74279D12560044A957 /* HomeProductCollectionViewCell.swift in Sources */,
 				D20ECA6C27B76A990094A364 /* StatusContentView.swift in Sources */,

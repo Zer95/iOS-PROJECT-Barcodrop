@@ -12,7 +12,6 @@ class SettingViewModel {
     // Setting VC List
     let vcList = [AlarmSelectViewController()]
 
-    
     // Section List
     let sectionModelList = ["알림 설정", "Q&A", "기타"]
     
