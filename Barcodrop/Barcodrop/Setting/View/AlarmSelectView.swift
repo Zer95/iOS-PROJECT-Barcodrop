@@ -8,7 +8,13 @@
 import UIKit
 import Lottie
 
+protocol AlarmSelectViewDelegate: AnyObject {
+    func actionHandle()
+}
+
 class AlarmSelectView: UIView {
+    
+    var delegate: AlarmSelectViewDelegate?
     
     let animation = AnimationView()
     let animationView = UIView()
@@ -34,6 +40,20 @@ class AlarmSelectView: UIView {
         $0.preferredDatePickerStyle = .wheels
         $0.locale = Locale(identifier: "ko-KR")
         $0.setValue(UIColor.white, forKeyPath: "textColor")
+    }
+    
+    let okButton = UIButton().then {
+        $0.setTitle("확인", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        $0.addTarget(self, action: #selector(actionHandleButton), for: .touchDown)
+    }
+    
+    let cancleButton = UIButton().then {
+        $0.setTitle("취소", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        $0.addTarget(self, action: #selector(actionHandleButton), for: .touchDown)
     }
     
     override init(frame: CGRect) {
@@ -75,6 +95,18 @@ class AlarmSelectView: UIView {
             $0.height.equalTo(390)
         }
         
+        addSubview(okButton)
+        okButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(100)
+            $0.left.equalToSuperview().offset(50)
+        }
+        
+        addSubview(cancleButton)
+        cancleButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(100)
+            $0.right.equalToSuperview().inset(50)
+        }
+        
     }
     
     func animationSetting() {
@@ -85,5 +117,8 @@ class AlarmSelectView: UIView {
         animation.play()
     }
     
+    @objc func actionHandleButton() {
+        delegate?.actionHandle()
+    }
     
 }

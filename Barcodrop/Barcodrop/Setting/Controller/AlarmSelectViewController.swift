@@ -27,6 +27,7 @@ class AlarmSelectViewController: UIViewController {
     
     func configureUI() {
         view.addSubview(alarmSelectView)
+        alarmSelectView.delegate = self
         alarmSelectView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -34,7 +35,15 @@ class AlarmSelectViewController: UIViewController {
     
     
     @objc func viewMapTapped(sender: UITapGestureRecognizer) {
-        self.dismiss(animated: true, completion: nil)
+      //  self.dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension AlarmSelectViewController: AlarmSelectViewDelegate {
+    
+    func actionHandle() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }
