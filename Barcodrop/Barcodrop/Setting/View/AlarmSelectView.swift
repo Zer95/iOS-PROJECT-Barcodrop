@@ -24,6 +24,14 @@ class AlarmSelectView: UIView {
         $0.alignment = .leading
     }
     
+    let datePicker = UIDatePicker().then {
+        $0.backgroundColor = .clear
+        $0.datePickerMode = .time
+        $0.preferredDatePickerStyle = .wheels
+        $0.locale = Locale(identifier: "ko-KR")
+        $0.setValue(UIColor.white, forKeyPath: "textColor")
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .clear
@@ -40,6 +48,14 @@ class AlarmSelectView: UIView {
         dayStackButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.left.equalToSuperview().offset(24)
+        }
+        
+        addSubview(datePicker)
+        datePicker.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.right.equalToSuperview().inset(24)
+            $0.width.equalTo(160)
+            $0.height.equalTo(390)
         }
         
     }
