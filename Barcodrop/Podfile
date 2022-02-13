@@ -12,4 +12,5 @@ target 'Barcodrop' do
     pod 'DropDown'		
     pod 'MaterialComponents/Buttons' 
     pod 'Charts'
+    pod 'lottie-ios'
 end
