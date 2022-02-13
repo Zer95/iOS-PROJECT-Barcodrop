@@ -33,6 +33,11 @@ class HomeViewController: UIViewController {
         $0.itemSize = CGSize(width: 180, height: 340)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func viewDidLoad() {
         view.backgroundColor = .white
         configureUI()

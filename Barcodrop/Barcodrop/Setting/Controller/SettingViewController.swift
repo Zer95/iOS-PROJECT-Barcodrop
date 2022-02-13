@@ -34,6 +34,7 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        
         configureUI()
     }
     
@@ -67,6 +68,12 @@ extension SettingViewController {
             vc.modalPresentationStyle = .overFullScreen
             vc.modalTransitionStyle = .crossDissolve
             self.present(vc, animated: true, completion: nil)
+        }
+        
+        if type == .navi {
+            
+            let vc = viewModel.vcList[identifier]
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -131,17 +138,17 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             if viewModel.section1[indexPath.row].nextPage == true {
                 actionMoveVC(type: viewModel.section1[indexPath.row].nextPageType,
-                                     identifier: viewModel.section1[indexPath.row].nextPageIdentifier)
+                             identifier: viewModel.section1[indexPath.row].nextPageIdentifier)
             }
         case 1:
             if viewModel.section2[indexPath.row].nextPage == true {
                 actionMoveVC(type: viewModel.section2[indexPath.row].nextPageType,
-                                     identifier: viewModel.section2[indexPath.row].nextPageIdentifier)
+                             identifier: viewModel.section2[indexPath.row].nextPageIdentifier)
             }
         case 2:
             if viewModel.section3[indexPath.row].nextPage == true {
                 actionMoveVC(type: viewModel.section3[indexPath.row].nextPageType,
-                                     identifier: viewModel.section3[indexPath.row].nextPageIdentifier)
+                             identifier: viewModel.section3[indexPath.row].nextPageIdentifier)
             }
         default:
             print("none")

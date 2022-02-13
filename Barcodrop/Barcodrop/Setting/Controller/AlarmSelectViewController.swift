@@ -13,6 +13,11 @@ class AlarmSelectViewController: UIViewController {
     
     let alarmSelectView = AlarmSelectView()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        alarmSelectView.animation.play()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
