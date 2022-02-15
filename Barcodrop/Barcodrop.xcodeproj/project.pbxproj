@@ -165,6 +165,9 @@
 			children = (
 				D2CBB69B279442130052F41E /* AppDelegate.swift */,
 				D2CBB69D279442130052F41E /* SceneDelegate.swift */,
+				D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */,
+				D23E92A5279C3C070093AC28 /* Main.storyboard */,
+				D24FA4B727B8D2EB00B4C83C /* SourceFile */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -190,8 +193,7 @@
 			children = (
 				D24FA4B827B8D2F500B4C83C /* Animation */,
 			);
-			name = SourceFile;
-			path = App/SourceFile;
+			path = SourceFile;
 			sourceTree = "<group>";
 		};
 		D24FA4B827B8D2F500B4C83C /* Animation */ = {
@@ -368,10 +370,7 @@
 				D2C6234327A1744F000D6D62 /* Category */,
 				D2C3CD2B27AFCE1C00EE9FB5 /* Status */,
 				D23E92A8279C3F5C0093AC28 /* Setting */,
-				D24FA4B727B8D2EB00B4C83C /* SourceFile */,
 				D2CBB6A4279442130052F41E /* Assets.xcassets */,
-				D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */,
-				D23E92A5279C3C070093AC28 /* Main.storyboard */,
 				D2CBB6A9279442130052F41E /* Info.plist */,
 			);
 			path = Barcodrop;
