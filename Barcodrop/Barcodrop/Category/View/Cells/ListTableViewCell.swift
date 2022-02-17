@@ -65,12 +65,15 @@ class ListTableViewCell: UITableViewCell {
         self.backgroundColor = .white
         
         contentView.addSubview(categoryLabel)
+        contentView.addSubview(listView)
+        listView.addSubview(listHeaderItem)
+        listView.addSubview(listCollectionView)
+        
         categoryLabel.snp.makeConstraints {
             $0.top.equalTo(20)
             $0.left.equalToSuperview().offset(26)
         }
         
-        contentView.addSubview(listView)
         listView.snp.makeConstraints {
             $0.top.equalTo(categoryLabel.snp.bottom).offset(5)
             $0.left.equalToSuperview().offset(24)
@@ -78,12 +81,10 @@ class ListTableViewCell: UITableViewCell {
             $0.bottom.equalToSuperview().inset(24)
         }
         
-        listView.addSubview(listHeaderItem)
         listHeaderItem.snp.makeConstraints {
             $0.top.left.right.equalToSuperview()
         }
         
-        listView.addSubview(listCollectionView)
         listCollectionView.snp.makeConstraints {
             $0.top.equalTo(listHeaderItem.totalLabel.snp.bottom).offset(5)
             $0.left.right.equalToSuperview()

@@ -33,18 +33,19 @@ class FAQView: UIView {
     private func configureUI() {
         
         addSubview(animationView)
+        animationView.addSubview(animation)
+        addSubview(updateLabel)
+
         animationView.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
             $0.left.right.equalToSuperview()
             $0.height.equalTo(200)
         }
         
-        animationView.addSubview(animation)
         animation.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
-        addSubview(updateLabel)
         updateLabel.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
         }

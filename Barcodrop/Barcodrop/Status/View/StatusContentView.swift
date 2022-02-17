@@ -112,45 +112,47 @@ class StatusContentView: UIView {
         
         // Count
         dangerCircleView.addSubview(dangerConutLabel)
+        normalCircleView.addSubview(normalConutLabel)
+        safeCircleView.addSubview(safeCountLabel)
+        passCircleView.addSubview(passConutLabel)
+
         dangerConutLabel.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
         }
         
-        normalCircleView.addSubview(normalConutLabel)
         normalConutLabel.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
         }
         
-        safeCircleView.addSubview(safeCountLabel)
         safeCountLabel.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
         }
-        
-        passCircleView.addSubview(passConutLabel)
+      
         passConutLabel.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
         }
         
         // Title
         addSubview(dangerLabel)
+        addSubview(normalLabel)
+        addSubview(safeLabel)
+        addSubview(passLabel)
+
         dangerLabel.snp.makeConstraints {
             $0.top.equalTo(dangerCircleView.snp.bottom).offset(10)
             $0.centerX.equalTo(dangerCircleView)
         }
         
-        addSubview(normalLabel)
         normalLabel.snp.makeConstraints {
             $0.top.equalTo(normalCircleView.snp.bottom).offset(10)
             $0.centerX.equalTo(normalCircleView)
         }
         
-        addSubview(safeLabel)
         safeLabel.snp.makeConstraints {
             $0.top.equalTo(safeCircleView.snp.bottom).offset(10)
             $0.centerX.equalTo(safeCircleView)
         }
         
-        addSubview(passLabel)
         passLabel.snp.makeConstraints {
             $0.top.equalTo(passCircleView.snp.bottom).offset(10)
             $0.centerX.equalTo(passCircleView)

@@ -40,6 +40,8 @@ class ListView: UIView {
         super.layoutSubviews()
         
         addSubview(contentView)
+        contentView.addSubview(listHeaderItem)
+        
         contentView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.left.equalToSuperview().offset(24)
@@ -47,7 +49,6 @@ class ListView: UIView {
             $0.bottom.equalToSuperview().inset(24)
         }
         
-        contentView.addSubview(listHeaderItem)
         listHeaderItem.snp.makeConstraints {
             $0.top.left.right.equalToSuperview()
         }

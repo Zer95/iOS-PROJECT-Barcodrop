@@ -70,6 +70,12 @@ class AlarmSelectView: UIView {
     private func configureUI() {
         
         addSubview(animationView)
+        animationView.addSubview(animation)
+        addSubview(dayStackButton)
+        addSubview(datePicker)
+        addSubview(okButton)
+        addSubview(cancleButton)
+
         animationView.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
             $0.left.right.equalToSuperview()
@@ -81,13 +87,11 @@ class AlarmSelectView: UIView {
             $0.edges.equalToSuperview()
         }
         
-        addSubview(dayStackButton)
         dayStackButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.left.equalToSuperview().offset(24)
         }
         
-        addSubview(datePicker)
         datePicker.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.right.equalToSuperview().inset(24)
@@ -95,13 +99,11 @@ class AlarmSelectView: UIView {
             $0.height.equalTo(390)
         }
         
-        addSubview(okButton)
         okButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(100)
             $0.left.equalToSuperview().offset(50)
         }
         
-        addSubview(cancleButton)
         cancleButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(100)
             $0.right.equalToSuperview().inset(50)

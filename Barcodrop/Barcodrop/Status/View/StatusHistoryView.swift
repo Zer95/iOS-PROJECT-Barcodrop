@@ -65,12 +65,14 @@ class StatusHistoryView: UIView {
     func configureUI() {
         
         addSubview(titleLabel)
+        addSubview(dangerButton)
+        addSubview(passButton)
+        
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.left.equalToSuperview().offset(24)
         }
         
-        addSubview(dangerButton)
         dangerButton.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(10)
             $0.left.equalToSuperview().offset(24)
@@ -78,7 +80,6 @@ class StatusHistoryView: UIView {
             $0.height.equalTo(50)
         }
         
-        addSubview(passButton)
         passButton.snp.makeConstraints {
             $0.top.equalTo(dangerButton.snp.bottom).offset(20)
             $0.left.equalToSuperview().offset(24)

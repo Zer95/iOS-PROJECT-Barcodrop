@@ -61,18 +61,20 @@ class SettingTableViewCell: UITableViewCell {
     private func configureUI() {
         
         addSubview(contentLabel)
+        addSubview(switchButton)
+        addSubview(nextStackView)
+
+        
         contentLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.left.equalToSuperview().offset(16)
         }
         
-        addSubview(switchButton)
         switchButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.right.equalToSuperview().inset(16)
         }
         
-        addSubview(nextStackView)
         nextStackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.right.equalToSuperview().inset(16)

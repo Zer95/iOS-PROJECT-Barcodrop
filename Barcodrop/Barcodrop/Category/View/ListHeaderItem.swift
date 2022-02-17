@@ -62,12 +62,13 @@ class ListHeaderItem: UIView {
     func configureUI() {
         
         addSubview(totalLabel)
+        addSubview(stackLabel)
+        
         totalLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(3)
             $0.left.equalToSuperview().offset(10)
         }
         
-        addSubview(stackLabel)
         stackLabel.snp.makeConstraints {
             $0.centerY.equalTo(totalLabel)
             $0.right.equalToSuperview().inset(10)
