@@ -12,6 +12,7 @@ class FAQView: UIView {
     
     let animation = AnimationView()
     let animationView = UIView()
+    let titleView = SettingTitleView()
     
     let updateLabel = UILabel().then {
         $0.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
@@ -32,12 +33,20 @@ class FAQView: UIView {
     
     private func configureUI() {
         
+        addSubview(titleView)
         addSubview(animationView)
         animationView.addSubview(animation)
         addSubview(updateLabel)
 
-        animationView.snp.makeConstraints {
+        addSubview(titleView)
+        titleView.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(30)
+        }
+        
+        animationView.snp.makeConstraints {
+            $0.top.equalTo(titleView.snp.bottom)
             $0.left.right.equalToSuperview()
             $0.height.equalTo(200)
         }

@@ -45,6 +45,7 @@
 		D2CBB69E279442130052F41E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CBB69D279442130052F41E /* SceneDelegate.swift */; };
 		D2CBB6A5279442130052F41E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CBB6A4279442130052F41E /* Assets.xcassets */; };
 		D2CBB6A8279442130052F41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CBB6A6279442130052F41E /* LaunchScreen.storyboard */; };
+		D2E23F8C27C10EAD00326022 /* SettingTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E23F8B27C10EAD00326022 /* SettingTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		D2CBB6A4279442130052F41E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2CBB6A7279442130052F41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2CBB6A9279442130052F41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2E23F8B27C10EAD00326022 /* SettingTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				D24FA4B227B8C80A00B4C83C /* Cell */,
 				D24FA4B527B8C9F300B4C83C /* AlarmDayButton.swift */,
 				D24FA4B327B8C82200B4C83C /* AlarmSelectView.swift */,
+				D2E23F8B27C10EAD00326022 /* SettingTitleView.swift */,
 				D24FA4BD27B8E1B100B4C83C /* FAQView.swift */,
 			);
 			path = View;
@@ -497,6 +500,7 @@
 				D2AFCB5B27B7D7FF005A170E /* SettingTableViewCell.swift in Sources */,
 				D23E92AC279C3F810093AC28 /* CategoryViewController.swift in Sources */,
 				D23E92B4279C51440093AC28 /* HomeView.swift in Sources */,
+				D2E23F8C27C10EAD00326022 /* SettingTitleView.swift in Sources */,
 				D27CB91127B556BC00765C04 /* StatusSideView.swift in Sources */,
 				D2C3CD2527AFA2BC00EE9FB5 /* ImageToText.swift in Sources */,
 				D24FA4B627B8C9F300B4C83C /* AlarmDayButton.swift in Sources */,
