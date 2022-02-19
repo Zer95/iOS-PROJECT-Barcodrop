@@ -12,7 +12,7 @@ class FAQView: UIView {
     
     let animation = AnimationView()
     let animationView = UIView()
-    let titleView = SettingTitleView()
+    let titleView = SettingTitleView(title: "자주 묻는 질문")
     
     let updateLabel = UILabel().then {
         $0.font = UIFont.systemFont(ofSize: 18, weight: .semibold)

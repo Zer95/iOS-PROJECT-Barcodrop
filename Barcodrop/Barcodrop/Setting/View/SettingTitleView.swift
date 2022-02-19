@@ -24,8 +24,9 @@ class SettingTitleView: UIView {
     }
     
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(title: String) {
+        super.init(frame: .zero)
+        titleLabel.text = title
         configureUI()
     }
     
