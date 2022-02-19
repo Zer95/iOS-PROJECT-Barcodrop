@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class FAQViewController: UIViewController {
+class FAQViewController: UIViewController, UIGestureRecognizerDelegate {
     
     let faqViwe = FAQView()
     
@@ -17,6 +17,9 @@ class FAQViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         configureUI()
+        
+        // 화면 제스처 추가
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
     private func configureUI() {
