@@ -13,7 +13,7 @@ class SettingTitleView: UIView {
 
     let titleLabel =  UILabel().then {
         $0.text = "Title"
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         $0.textColor = .black
     }
     

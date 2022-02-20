@@ -20,6 +20,7 @@ class FAQViewController: UIViewController, UIGestureRecognizerDelegate {
         
         // 화면 제스처 추가
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        faqViwe.titleView.backButton.addTarget(self, action: #selector(backButton), for: .touchDown)
     }
     
     private func configureUI() {
@@ -29,4 +30,9 @@ class FAQViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         
     }
+    
+    @objc func backButton() {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
